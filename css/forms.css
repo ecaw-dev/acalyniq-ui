@@ -1,0 +1,343 @@
+@import url(main.css);
+
+.form-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--body-bg);
+    /* overflow: hidden; */
+    padding: 2rem;
+    gap: 4rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.form-image {
+    width: 45%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 3;
+}
+
+.login-wrapper .form-image {
+    border-right: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.form-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-image .text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: start;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: .5rem;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+.form-image .text p {
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.form-header {
+    width: 50%;
+    padding: 0;
+}
+
+.form-container {
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+
+.form-container .slide-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 1rem;
+    transition: var(--transition-2);
+}
+
+.form-container .slide-buttons .submit-btn,
+.form-container .slide-buttons .prev-btn {
+    /* display: none; */
+    position: absolute;
+    z-index: -9999;
+    opacity: 0;
+    transition: var(--transition-2);
+}
+
+.form-container .slide-buttons .submit-btn.active,
+.form-container .slide-buttons .prev-btn.active {
+    /* display: block; */
+    position: static;
+    z-index: 9999;
+    opacity: 1;
+    transition: var(--transition-2);
+}
+
+
+.form-container.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container .logo-and-header {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: column; */
+    gap: 0;
+}
+
+.form-container .logo {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container .logo .go-back {
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    font-size: 1.3rem;
+    transition: var(--transition-2);
+    background: var(--tertiary-color);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-r-2);
+    border: none;
+}
+
+.form-container .logo img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.form-container .logo-and-header p {
+    font-size: .9rem;
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    color: var(--dark-gray-color);
+}
+
+
+
+.form-container .data-form {
+    width: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-container .data-form > .submit-btn {
+    width: fit-content;
+    place-self: end;
+}
+
+.form-container .data-form .slides-container {
+    min-height: 37.7vh;
+    position: relative;
+}
+
+.form-header p {
+    font-family: var(--secondary-font);
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--dark-gray-color);
+}
+
+.form-header h2 {
+    font-size: 2rem;
+}
+
+.form-header h2 i {
+    margin-right: .3rem;
+    color: var(--main-color);
+}
+
+.form-container .data-form .fields-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+.form-container .data-form .fields-container .field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+.form-container .data-form .fields-container .field label {
+    font-family: var(--secondary-font);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.form-container .data-form .fields-container .field input {
+    width: 100%;
+    padding: .5rem 1rem;
+    border-radius: var(--border-r-2);
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--main-text-color);
+    outline: none;
+}
+
+.form-container .data-form .fields-container .field input::placeholder {
+    color: var(--dark-gray-color);
+}
+
+
+/*Password*/
+
+
+.form-container .data-form .fields-container .field .password-container,
+.form-container .data-form .fields-container .field .phone-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+.form-container .data-form .fields-container .field .password-container input,
+.form-container .data-form .fields-container .field .phone-container input {
+    width: 100%;
+    padding: .5rem 0 .5rem 1rem;
+    border-radius: var(--border-r-2);
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--main-text-color);
+    background: none;
+    outline: none;
+    border: none;
+}
+
+
+.form-container .data-form .fields-container .field .password-container input::placeholder,
+.form-container .data-form .fields-container .field .phone-container input::placeholder {
+    color: var(--dark-gray-color);
+}
+
+.form-container .data-form .fields-container .field .password-container .toggle-show-password {
+    color: var(--dark-gray-color);
+    transition: var(--transition-2);
+}
+
+.form-container .data-form .fields-container .field .password-container .toggle-show-password:hover {
+    color: var(--main-color);
+    transition: var(--transition-1);
+}
+
+.form-container .data-form .fields-container .field .password-container::before,
+.form-container .data-form .fields-container .field .phone-container::before,
+#dateOfBirth::before {
+
+    display: none;
+}
+
+#dateOfBirth {
+    padding: .4523rem 1rem;
+}
+
+.form-container .data-form .fields-container .field .phone-container span {
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark-gray-color);
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    padding: .5rem;
+    cursor: default;
+}
+
+.form-container .data-form .fields-container .field select {
+    width: 100%;
+    padding: .5rem 1rem;
+    border-radius: var(--border-r-2);
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--main-text-color);
+    outline: none;
+}
+
+.form-container .data-form .fields-container .field #gender option {}
+
+
+/*Form silder*/
+
+
+.form-slide {
+    position: absolute;
+    /* background: var(--body-bg); */
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: var(--transition-2);
+}
+
+.form-slide:nth-child(1) {
+    z-index: 9;
+}
+
+.form-slide.active {
+    z-index: 99;
+    opacity: 1;
+}
+
+/* .form-slide:nth-last-child(1) {
+    z-index: 99;
+} */
