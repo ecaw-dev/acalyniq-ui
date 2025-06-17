@@ -186,17 +186,22 @@ body {
     color: var(--main-color);
 }
 
-.navbar ul .nav-link.btn.register {
+.navbar ul .register {
     position: relative;
 }
 
-.navbar ul .nav-link.btn.register::after {
-    content: "|";
+.navbar ul .register::after {
+    content: "";
     position: absolute;
-    right: -0.65rem;
+    right: -0.62rem;
     top: 50%;
     transform: translateY(-50%);
     color: var(--dark-gray-color);
+    width: 3px;
+    height: 20px;
+    border-radius: 5rem;
+    background: var(--dark-gray-color);
+  
 }
 
 /*====  HERO SECTION  ====*/
@@ -702,7 +707,7 @@ body {
     font-size: .9rem;
     font-weight: 700;
     color: var(--main-color);
-    background: var(--fourth-color);
+    /* background: var(--fourth-color); */
     padding: .3rem .5rem;
     border-radius: var(--border-r-1);
 
@@ -728,6 +733,8 @@ body {
 }
 
 
+
+
 .more-info .course-price a {
     font-size: .6rem;
     font-weight: 600;
@@ -749,6 +756,21 @@ body {
     line-height: 1.2rem;
     color: var(--main-color);
     font-family: var(--secondary-font);
+}
+
+.more-info .course-price a span .currency,
+.more-info .course-price a span .off-sale {
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--dark-gray-color);
+    font-family: var(--secondary-font);
+    line-height: 0;
+}
+
+.more-info .course-price a span .off-sale {
+    font-size: .9rem;
+    text-decoration: line-through;
+    font-family: var(--main-font);
 }
 
 /*  Videos Section  */
