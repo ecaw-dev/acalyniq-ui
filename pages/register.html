@@ -20,6 +20,11 @@
 <body>
 
     <main class="form-wrapper">
+
+        <div class="heading">
+            <p class="info"> Already have an account? <a href="login.html">Login</a> </p>
+            <span><i class="fa-solid fa-info-circle"></i> Labels taged with * are required</span>
+        </div>
         <header class="form-header">
             <h2> <i class="fa-solid fa-user-plus"></i> Register</h2>
             <p>Please, fill in the form bellow with your details in order to create an account.</p>
@@ -67,7 +72,7 @@
                                 <div class="field">
                                     <label for="name">Gender*</label>
                                     <select required name="gender" id="gender" class="blur-bg">
-                                        <option value="" disabled selected hidden>Select gender</option>
+                                        <option value="" disabled selected hidden> -- Select gender -- </option>
                                         <option value="male">Male</option>
                                         <option value="female">Female</option>
                                     </select>
@@ -86,7 +91,7 @@
                                 
                                     <select name="role" class="blur-bg" id="role">
                                         <option value="" disabled selected hidden>
-                                            Select role
+                                            -- Select role --
                                         </option>
                                         <option value="student">Student</option>
                                         <option value="instructor">Instructor</option>

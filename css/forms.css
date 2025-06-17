@@ -16,6 +16,42 @@
     background-repeat: no-repeat;
 }
 
+.heading {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    font-size: 1rem;
+    padding: 1rem 3rem;
+}
+
+.heading a {
+    color: var(--main-color);
+    font-weight: 600;
+    /* transition: var(--transition-2); */
+    /* text-decoration: none; */
+}
+
+.heading a:hover {
+    text-decoration: underline;
+    color: var(--dark-gray-color);
+}
+
+.heading span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    font-size: .9rem;
+}
+
+.heading span i {
+    font-size: 1rem;
+}
+
 .form-image {
     width: 45%;
     height: 100vh;
@@ -313,9 +349,6 @@
     color: var(--main-text-color);
     outline: none;
 }
-
-.form-container .data-form .fields-container .field #gender option {}
-
 
 /*Form silder*/
 

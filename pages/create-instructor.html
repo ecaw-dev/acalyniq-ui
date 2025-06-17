@@ -23,45 +23,45 @@
 
     <main class="form-wrapper">
         <header class="form-header">
-            <h2> <i class="fa-solid fa-school"></i> Register a student</h2>
-            <p>Please fill in the form below to register as a student.</p>
+            <h2> <i class="fa-solid fa-school"></i> Register a teacher</h2>
+            <p>Please fill in the form below to register as a teacher.</p>
         </header>
         <div class="form-container">
             <form action="" class="data-form register-form">
 
                 <div class="fields-container">
                     <div class="field">
-                        <label for="grade">Grade*</label>
-                        <select name="grade" class="blur-bg" id="grade">
-                            <option value="" disabled selected hidden> -- Select Your Grade -- </option>
-                            <option value="5">Primary 5</option>
-                            <option value="6">Primary 6</option>
-                            <option value="7">Preparatory 1</option>
-                            <option value="8">Preparatory 2</option>
-                            <option value="9">Preparatory 3</option>
-                            <option value="10">Secondary 1</option>
-                            <option value="11">Secondary 2</option>
-                            <option value="12">Secondary 3</option>
-                        </select>
+                        <label for="profession">Profession/Subject*</label>
+                        <input type="text" id="profession" required placeholder="eg. Mathematics" class="profession blur-bg">
                     </div>
                     <div class="field">
                         <label for="password">School*</label>
-                            <input type="text" required class="blur-bg" autocomplete="new-password" id="school"
+                            <input type="text" required class="blur-bg" autocomplete="new-school" id="school"
                                 placeholder="eg. St. John's Primary School">
                     </div>
 
                     <div class="field">
-                        <label for="skills">
-                            Skills
+                        <label for="grades">
+                            Grades
                         </label>
 
-                        <div class="skills-input-container">
-                            <input type="text" class="blur-bg" id="skills" placeholder="eg. Reading">
-                            <button type="button" class="btn bg-white add-skill"><i class="fa-solid fa-plus"></i></button>
+                        <div class="grades-input-container">
+                            <select name="grades" class="blur-bg" id="grades">
+                                <option value="" disabled selected hidden> -- Select Teached Gardes -- </option>
+                                <option value="5">Primary 5</option>
+                                <option value="6">Primary 6</option>
+                                <option value="7">Preparatory 1</option>
+                                <option value="8">Preparatory 2</option>
+                                <option value="9">Preparatory 3</option>
+                                <option value="10">Secondary 1</option>
+                                <option value="11">Secondary 2</option>
+                                <option value="12">Secondary 3</option>
+                                </select>
+                            <button type="button" class="btn bg-white add-grade"><i class="fa-solid fa-plus"></i></button>
                         </div>
 
 
-                        <div class="skills-container">
+                        <div class="grades-container">
                             
                         </div>
                     </div>
@@ -81,7 +81,7 @@
 
 
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-    <script src="../js/create-student.js"></script>
+    <script src="../js/create-instructor.js"></script>
 
 </body>
 

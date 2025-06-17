@@ -15,10 +15,21 @@ function removeSkill(element) {
 
 addSkillBtn.addEventListener('click', () => {
 
+    if(addSkillInput.value == '') {
+        alert('Please select a skill')
+        return
+    }
+
     if(skillsArray.length >= 5) {
         alert('You can add only 5 skills')
         return
     }
+
+    if(skillsArray.includes(addSkillInput.value.toLowerCase())) {
+        alert('You can not add the same skill twice')
+        return
+    }
+
     const skill = addSkillInput.value.trim();
     const newSkill = `
      <div class="skill">
@@ -27,7 +38,7 @@ addSkillBtn.addEventListener('click', () => {
      </div>
     `
 
-    skillsArray.push(skill)
+    skillsArray.push(skill.toLowerCase())
     skillsContainer.innerHTML += newSkill
 
     addSkillInput.value = '';

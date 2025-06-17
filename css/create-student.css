@@ -2,14 +2,16 @@
 
 
 
-.skills-input-container {
+.skills-input-container,
+.grades-input-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
 }
 
-.skills-container {
+.skills-container,
+.grades-container {
     display: flex;
     
     gap: 1rem;
@@ -18,20 +20,22 @@
     overflow-x: auto;
 }
 
-.skills-container.active {
-    margin-top: 1rem;
-}
-
-.skills-container::-webkit-scrollbar {
+.skills-container::-webkit-scrollbar,
+.grades-container::-webkit-scrollbar {
+    width: 5px;
     height: 5px;
 }
 
-.skills-container::-webkit-scrollbar-thumb {
+.skills-container::-webkit-scrollbar-thumb,
+.grades-container::-webkit-scrollbar-thumb {
+    background: var(--dark-gray-color);
+    border-radius: var(--border-r-2);
     background: #fff;
     border-radius: var(--border-r-2);
 }
 
-.skills-container .skill {
+.skills-container .skill,
+.grades-container .grade {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,13 +48,20 @@
     margin-top: 1rem;
 }
 
-.skills-container .skill h5 {
+.skills-container .skill h5,
+.grades-container .grade h5 {
+    font-size: 1rem;
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    color: var(--dark-gray-color);
     max-lines: 1;
     word-break: keep-all;
     word-wrap: normal;
 }
 
-.skills-container .skill button {
+.skills-container .skill button,
+.grades-container .grade button {
+    cursor: pointer;
     color: var(--dark-gray-color);
     transition: var(--transition-2);
     background: none;
@@ -58,7 +69,8 @@
     font-size: 1.2rem;
 }
 
-.skills-container .skill button:hover {
+.skills-container .skill button:hover,
+.grades-container .grade button:hover {
     color: var(--main-color);
     transition: var(--transition-1);
 }

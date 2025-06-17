@@ -59,16 +59,14 @@ body {
     position: absolute;
     bottom: 50%;
     left: 50%;
-
     width: 100px;
     height: 100px;
     background: var(--main-color);
     border-radius: 50%;
     z-index: -1;
-    opacity: 0.5;
+    opacity: 0;
     filter: blur(40px);
     transition: var(--transition-2);
-    display: none;
 }
 
 .blur-bg:hover::before {
@@ -90,6 +88,11 @@ body {
 .blur-bg.pos3::before {
     bottom: 100px;
     right: 10px;
+}
+
+.blur-bg.pos4::before {
+    top: 100px;
+    left: 100px;
 }
 
 .btn {
@@ -388,7 +391,7 @@ body {
     rotate: 30deg;
 }
 
-.info {
+.hero-section .info {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -401,25 +404,25 @@ body {
     animation: animation_info 8s ease-in-out infinite;
 }
 
-.info p {
+.hero-section .info p {
     font-size: .9rem;
     font-family: var(--secondary-font);
     font-weight: 700;
 }
 
-.info.students-count {
+.hero-section .info.students-count {
     top: 30%;
     right: 5%;
     rotate: 10deg;
 }
 
-.info.teachers-count {
+.hero-section .info.teachers-count {
     top: 50%;
     right: 35%;
     rotate: -10deg;
 }
 
-.info.courses-count {
+.hero-section .info.courses-count {
     top: 75%;
     right: 5%;
     rotate: 10deg;
@@ -493,6 +496,11 @@ body {
     color: var(--main-text-color);
     width: 100%;
     position: relative;
+}
+
+.course-item::before,
+.video-item::before {
+    display: none;
 }
 
 .course-item a,
@@ -962,7 +970,11 @@ body {
 }
 
 .feature.blur-bg::before {
-    display: block;
+    opacity: .5;
+}
+
+.feature.blur-bg:hover::before {
+    opacity: 1;
 }
 
 .features-container .feature i {
