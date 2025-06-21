@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/courses.css" />
+    <title>AcalynIQ | Courses</title>
+</head>
+
+<body>
+
+    <main class="courses-page">
+        <nav class="navbar scrolling">
+            <a class="logo" href="../index.html">
+                <img src="../img/AcalynIQ.png" alt="logo" class="logo-image" />
+            </a>
+            <ul class="nav-list">
+                <div class="nav-links">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <!-- <li><a href="../index.html./course.htmlcourses" class="nav-link">Courses</a></li> -->
+                    <li><a href="../index.html./course.htmlabout" class="nav-link">About</a></li>
+                    <li><a href="../index.html./course.htmlcontact" class="nav-link">Contact</a></li>
+                </div>
+
+                <div class="auth-links">
+                    <li><a href="pages/register.html" class=" btn bg-white register">Register</a></li>
+                    <li><a href="pages/login.html" class=" btn login">Login</a>
+                    </li>
+                </div>
+
+            </ul>
+        </nav>
+
+        <div class="courses-wrapper padding">
+
+            <header class="filter">
+              
+
+                <div class="filters-container">
+                    <div class="filter-item">
+                        <i class="fa-solid fa-filter"></i>
+                    </div>
+                    <div class="filter-item">
+                        <select name="category" id="category" class="blur-bg">
+                            <option value="" disabled selected hidden>Category</option>
+                            <option value="all">All</option>
+                            <option value="frontend">Frontend</option>
+                            <option value="backend">Backend</option>
+                            <option value="fullstack">Fullstack</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-item">
+                        <select name="sort" id="sort" class="blur-bg">
+                            <option value="" disabled selected hidden>Sort</option>
+                            <option value="newest">Newest</option>
+                            <option value="oldest">Oldest</option>
+                            <option value="popular">Popular</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-item">
+                        <select name="price" id="price" class="blur-bg">
+                            <option value="" disabled selected hidden>Price</option>
+                            <option value="free">Free</option>
+                            <option value="paid">Paid</option>
+                        </select>
+                    </div>
+                </div>
+                <form class="search-form blur-bg">
+                    <input type="text" placeholder="Search" />
+                    <button type="submit" class="btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+
+            </header>
+
+            <div class="courses-container">
+                <div class="course-item blur-bg pos1">
+                    <a href="./course.html">
+                        <div class="course-thumbnail">
+                            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20201111215809/How-to-Become-a-Front-End-Developer-in-2020.png"
+                                alt="course" />
+
+                        </div>
+                        <div class="course-content">
+
+                            <div class="course-info">
+                                <h3>Learrn Python</h3>
+
+
+                                <div class="course-creator-and-time">
+                                    <div class="course-creator">
+                                        <img src="https://avatar.iran.liara.run/public/36" alt="creator">
+                                        <div>
+                                            <p>John Doe</p>
+                                            <span>john_doe</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="course-time">
+                                        <b> <i class="fa-solid fa-video"></i>10 Lessons</b>
+                                        <!-- <b> <i class="fa-solid fa-clock"></i>2h 30m</b> -->
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="more-info">
+
+                                <div class="course-category-and-rating">
+
+                                    <div class="course-category">
+                                        <i class="fa-solid fa-code"></i>
+                                        <p>Programming</p>
+                                    </div>
+
+                                    <div class="course-rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <span>(235)</span>
+                                    </div>
+
+
+                                </div>
+
+
+                                <div class="course-price">
+                                    <a href="./course.html" class="">
+                                        Enroll now for
+                                        <span> <span class="currency">EGP</span> 999 <span
+                                                class="off-sale">1199</span></span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="course-item blur-bg pos2">
+                    <a href="./course.html">
+                        <div class="course-thumbnail">
+                            <img src="https://www.picmaker.com/templates/_next/image?url=https%3A%2F%2Fstatic.picmaker.com%2Fscene-prebuilts%2Fthumbnails%2FYT-0016.png&w=3840&q=75"
+                                alt="course" />
+                        </div>
+                        <div class="course-content">
+
+                            <div class="course-info">
+                                <h3>Online Origami Class</h3>
+
+
+                                <div class="course-creator-and-time">
+                                    <div class="course-creator">
+                                        <img src="https://avatar.iran.liara.run/username?username=Scott+Wilson"
+                                            alt="creator">
+                                        <div>
+                                            <p>Scott Wilson</p>
+                                            <span>scott-wilson-tech122</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="course-time">
+                                        <b> <i class="fa-solid fa-video"></i>7 Lessons</b>
+                                        <!-- <b> <i class="fa-solid fa-clock"></i>2h 30m</b> -->
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="more-info">
+
+                                <div class="course-category-and-rating">
+
+                                    <div class="course-category">
+                                        <i class="fa-solid fa-palette"></i>
+                                        <p>Art</p>
+                                    </div>
+
+                                    <div class="course-rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <span>(35)</span>
+                                    </div>
+
+
+                                </div>
+
+
+                                <div class="course-price">
+                                    <a href="./course.html" class="">
+                                        Enroll now for
+                                        <span> <span class="currency">EGP</span> 199 <span
+                                                class="off-sale">299</span></span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="course-item blur-bg pos2">
+                    <a href="./course.html">
+                        <div class="course-thumbnail">
+                            <img src="https://www.picmaker.com/templates/_next/image?url=https%3A%2F%2Fstatic.picmaker.com%2Fscene-prebuilts%2Fthumbnails%2FYT-0016.png&w=3840&q=75"
+                                alt="course" />
+                        </div>
+                        <div class="course-content">
+
+                            <div class="course-info">
+                                <h3>Online Origami Class</h3>
+
+
+                                <div class="course-creator-and-time">
+                                    <div class="course-creator">
+                                        <img src="https://avatar.iran.liara.run/username?username=Scott+Wilson"
+                                            alt="creator">
+                                        <div>
+                                            <p>Scott Wilson</p>
+                                            <span>scott-wilson-tech122</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="course-time">
+                                        <b> <i class="fa-solid fa-video"></i>7 Lessons</b>
+                                        <!-- <b> <i class="fa-solid fa-clock"></i>2h 30m</b> -->
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="more-info">
+
+                                <div class="course-category-and-rating">
+
+                                    <div class="course-category">
+                                        <i class="fa-solid fa-palette"></i>
+                                        <p>Art</p>
+                                    </div>
+
+                                    <div class="course-rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <span>(35)</span>
+                                    </div>
+
+
+                                </div>
+
+
+                                <div class="course-price">
+                                    <a href="./course.html" class="">
+                                        Enroll now for
+                                        <span> <span class="currency">EGP</span> 199 <span
+                                                class="off-sale">299</span></span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="course-item blur-bg pos2">
+                    <a href="./course.html">
+                        <div class="course-thumbnail">
+                            <img src="https://www.picmaker.com/templates/_next/image?url=https%3A%2F%2Fstatic.picmaker.com%2Fscene-prebuilts%2Fthumbnails%2FYT-0016.png&w=3840&q=75"
+                                alt="course" />
+                        </div>
+                        <div class="course-content">
+
+                            <div class="course-info">
+                                <h3>Online Origami Class</h3>
+
+
+                                <div class="course-creator-and-time">
+                                    <div class="course-creator">
+                                        <img src="https://avatar.iran.liara.run/username?username=Scott+Wilson"
+                                            alt="creator">
+                                        <div>
+                                            <p>Scott Wilson</p>
+                                            <span>scott-wilson-tech122</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="course-time">
+                                        <b> <i class="fa-solid fa-video"></i>7 Lessons</b>
+                                        <!-- <b> <i class="fa-solid fa-clock"></i>2h 30m</b> -->
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="more-info">
+
+                                <div class="course-category-and-rating">
+
+                                    <div class="course-category">
+                                        <i class="fa-solid fa-palette"></i>
+                                        <p>Art</p>
+                                    </div>
+
+                                    <div class="course-rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <span>(35)</span>
+                                    </div>
+
+
+                                </div>
+
+
+                                <div class="course-price">
+                                    <a href="./course.html" class="">
+                                        Enroll now for
+                                        <span> <span class="currency">EGP</span> 199 <span
+                                                class="off-sale">299</span></span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="course-item blur-bg pos3">
+                    <a href="./course.html">
+                        <div class="course-thumbnail">
+                            <img src="https://templates.simplified.co/usetldr/1022255/thumb/5a108056-a070-44ee-a123-1afd489077e0.jpg"
+                                alt="course" />
+                        </div>
+                        <div class="course-content">
+
+                            <div class="course-info">
+                                <h3>Coding Course for Beginner</h3>
+
+
+                                <div class="course-creator-and-time">
+                                    <div class="course-creator">
+                                        <img src="https://avatar.iran.liara.run/public/41" alt="creator">
+                                        <div>
+                                            <p>Marcelo Jan</p>
+                                            <span>marcelo_133</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="course-time">
+                                        <b> <i class="fa-solid fa-video"></i>15 Lessons</b>
+                                        <!-- <b> <i class="fa-solid fa-clock"></i>2h 30m</b> -->
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="more-info">
+
+                                <div class="course-category-and-rating">
+
+                                    <div class="course-category">
+                                        <i class="fa-solid fa-code"></i>
+                                        <p>Programming</p>
+                                    </div>
+
+                                    <div class="course-rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half"></i>
+                                        <span>(125)</span>
+                                    </div>
+
+
+                                </div>
+
+
+                                <div class="course-price">
+                                    <a href="./course.html" class="">
+                                        Enroll now for
+                                        <span>Free</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="load-more-btn">
+                <a href="./course.html" class="btn">Load more</a>
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="../js/courses.js"></script>
+
+
+</body>
+
+</html>

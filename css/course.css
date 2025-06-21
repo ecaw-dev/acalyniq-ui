@@ -1,7 +1,7 @@
 @import url(main.css);
 
 .course-wrapper {
-    padding-top: 10%;
+    margin-top: 5rem;
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     grid-template-rows: 1fr;
@@ -216,7 +216,7 @@
 
 .course-creator-info-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     gap: 2rem;
     margin-top: 1rem;
@@ -237,6 +237,7 @@
     color: var(--main-color);
     transition: var(--transition-1);
 }
+
 .course-creator-info-item i {
     font-size: 2rem;
     color: var(--main-color);
@@ -271,6 +272,7 @@
     top: 105px;
     width: 85%;
     /* height: 100%; */
+    /* overflow: visible; */
 }
 
 .side-card .course-payment-info {
@@ -293,6 +295,10 @@
     justify-content: start;
     align-items: end;
     gap: .9rem;
+}
+
+.side-card.blur-bg::before {
+    opacity: 0;
 }
 
 .side-card .course-price-info p {
@@ -384,10 +390,74 @@
 .course-badges .badges {
     display: grid;
     grid-template-columns: repeat(2, 50px);
+    grid-template-rows: 1fr;
+    position: relative;
 }
 
-.course-badges .badges img {
+
+ .badge {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: .5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+ .badge:hover .badge-info-card {
+    z-index: 99999999999999999999999999999999999999;
+    opacity: 1;
+    transition: var(--transition-1);
+}
+
+ .badge .badge-info-card {
+    position: absolute;
+    top: 0;
+    left: calc(-200px - .5rem);
+    width: 200px;
+    scale: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    padding: .5rem;
+    border-radius: var(--border-r-1);
+    background: #fff;
+    cursor: pointer;
+    z-index: -99999999999999999999999999999999999999;
+    opacity: 0;
+    transition: var(--transition-2);
+    /* overflow: visible; */
+}
+
+
+ .badge .badge-info-card h5 {
+    font-size: .8rem;
+    font-weight: 600;
+    margin: 0;
+    font-family: var(--secondary-font);
+}
+
+ .badge .badge-info-card p {
+    font-size: .6rem !important;
+    font-family: var(--secondary-font);
+    /* font-weight: 400; */
+}
+
+ img {
     width: 100%;
-    height: 100%;
 }
 
+ .badge-info-card .badge-rank-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+    width: 100%;
+    margin-top: .5rem;
+    font-size: .9rem !important;
+    font-weight: 500;
+    font-family: var(--secondary-font);
+}

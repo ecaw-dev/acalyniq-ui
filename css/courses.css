@@ -1,0 +1,114 @@
+@import url(main.css);
+
+.courses-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    /* height: 100vh; */
+    margin-top: 5rem;
+}
+
+
+.courses-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    height: 100%;
+}
+
+.navbar {
+    /* position: static; */
+}
+
+.courses-wrapper .courses-container {    
+    /* padding: 2rem 3rem; */
+    /* overflow-y: scroll; */
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1rem;
+    margin-bottom: 2rem; 
+    width: 100%;
+}
+
+.filter .filters-container {
+    display: flex;
+    justify-content: start;
+    align-items: stretch;
+    gap: 1rem;
+    height: 100%;
+}
+
+.filter-item {
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-item i {
+    color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.filter-item select {
+    padding: .6rem 1rem;
+    border-radius: var(--border-r-2);
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--main-text-color);
+    outline: none;
+    height: 100%;
+    /* border: 1px solid var(--dark-gray-color); */
+    /* background: transparent; */
+}
+
+
+.search-form {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+    padding: .17rem .16rem .2rem 0;
+}
+
+.search-form input {
+    height: 100%;
+    width: 100%;
+    padding: .5rem 1rem;
+    background: none;
+    border: none;
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--main-text-color);
+    outline: none;
+}
+
+.search-form input::placeholder {
+    color: var(--dark-gray-color);
+}
+
+.search-form .btn {
+    height: 100%;
+    padding: .5rem .9rem;
+}
+
+.load-more-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 3rem;
+}
+

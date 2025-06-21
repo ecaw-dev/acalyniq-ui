@@ -1,4 +1,4 @@
-const navbars = document.querySelectorAll(".navbar");
+// const navbars = document.querySelectorAll(".navbar");
 const navbarList = document.querySelector(".nav-list .nav-links");
 let sections = document.querySelectorAll(".section");
 const bluredCards = document.querySelectorAll(".blur-bg");
@@ -38,11 +38,3 @@ for (let index = 0; index < links.length; index++) {
     });
   }
 
-window.addEventListener("scroll", (e) => {
-    if(window.scrollY > 0) {
-        navbars.forEach(navbar => navbar.classList.add("scrolling"));
-    } else {
-        navbars.forEach(navbar => navbar.classList.remove("scrolling"));
-
-    }
-});

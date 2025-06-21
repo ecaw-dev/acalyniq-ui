@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <title>AcalynIQ | Dashboard</title>
+</head>
+
+<body>
+
+    <nav class="navbar scrolling">
+        <a class="logo" href="../index.html">
+            <img src="../img/AcalynIQ.png" alt="logo" class="logo-image" />
+        </a>
+        <ul class="nav-list">
+            <div class="nav-links">
+                <li><a href="../index.html" class="nav-link">Dashboard</a></li>
+                <!-- <li><a href="../index.html#courses" class="nav-link">Courses</a></li> -->
+                <li><a href="./courses.html" class="nav-link">Courses</a></li>
+                <li><a href="./videos.html" class="nav-link">Videos</a></li>
+                <li><a href="./contact.html" class="nav-link">Contact</a></li>
+            </div>
+
+            <div class="auth-links">
+                <li>
+                    <a href="./profile.html" class="">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+                            class="profile-icon" alt="">
+                    </a>
+                </li>
+            </div>
+
+        </ul>
+    </nav>
+
+    <main class="dashboard-wrapper padding">
+
+        <section class="top-bar-info">
+            <div class="top-bar-info-item blur-bg pos1">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h2>10</h2>
+                <p>Completed Courses</p>
+            </div>
+            <div class="top-bar-info-item blur-bg pos2">
+                <i class="fa-solid fa-video"></i>
+                <h2>50</h2>
+                <p>Watched Videos</p>
+            </div>
+            <div class="top-bar-info-item blur-bg">
+                <i class="fa-solid fa-trophy"></i>
+                <h2>150</h2>
+                <p>Quizzes Solved</p>
+            </div>
+            <div class="top-bar-info-item blur-bg pos4">
+                <i class="fa-solid fa-medal"></i>
+                <h2>200</h2>
+                <p>Badges Earned</p>
+            </div>
+
+            <div class="top-bar-info-item blur-bg pos1 rank">
+                <a href="#" class="share-cta">
+                    Share your rank on social media
+                </a>
+                <div class="rank-section">
+                    <h2>Rank</h2>
+                    <div class="current-rank">
+                        <div class="current-rank-badge">
+                            <img src="../img/badge2.png" class="" alt="">
+                        </div>
+                        <p>(current)</p>
+                        <b>Legendary </b>
+                        <span>1750 points</span>
+                    
+                    </div>
+                    <div class="rank-progress">
+                        <div class="rank-badge badge">
+                            <img src="../img/badge2.png" alt="badge">
+                            <b>Legendary</b>
+                            <span>1500 points</span>
+                            <div class="badge-info-card blur-bg">
+                                <h5>Legend badge</h5>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni molestiae
+                                    deleniti ipsa consectetur ex explicabo sapiente nesciunt dolorum quae iure!
+                                </p>
+                                <div class="badge-rank-info ">
+                                    <h6>+17 Rank</h6>
+                                    <h6>+25 Point</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rank-progress-bar">
+                            <span>
+                                <b>15% (current)</b>
+                                1750 points
+                            </span>
+                            <div class="rank-progress-bar-fill"></div>
+                        </div>
+                        <div class="next-rank rank-badge badge">
+                            <img src="../img/badge1_v2.png" alt="badge">
+                            <b>Epic</b>
+                            <span>2000 points</span>
+                            <div class="badge-info-card blur-bg">
+                                <h5>Legend badge</h5>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni molestiae
+                                    deleniti ipsa consectetur ex explicabo sapiente nesciunt dolorum quae iure!
+                                </p>
+                                <div class="badge-rank-info ">
+                                    <h6>+17 Rank</h6>
+                                    <h6>+25 Point</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+
+
+
+        </section>
+        <section class="continue-learning">
+            <div class="heading">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h2>Continue Learning</h2>
+            </div>
+            <div class="continue-learning-container">
+                <div class="course-item blur-bg pos1">
+                    <a href="pages/course.html">
+                        <div class="course-thumbnail">
+                            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20201111215809/How-to-Become-a-Front-End-Developer-in-2020.png"
+                                alt="course" />
+
+                        </div>
+                        <div class="course-content">
+
+                            <div class="course-info">
+                                <h3>Learrn Python</h3>
+
+
+                                <div class="course-creator-and-time">
+                                    <div class="course-creator">
+                                        <img src="https://avatar.iran.liara.run/public/36" alt="creator">
+                                        <div>
+                                            <p>John Doe</p>
+                                            <span>john_doe</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="course-time">
+                                        <b> <i class="fa-solid fa-video"></i>10 Lessons</b>
+                                        <!-- <b> <i class="fa-solid fa-clock"></i>2h 30m</b> -->
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="more-info">
+
+
+                                <div class="course-progress">
+                                    <span>50%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 50%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="course-item blur-bg pos1">
+                    <a href="pages/course.html">
+                        <div class="course-thumbnail">
+                            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20201111215809/How-to-Become-a-Front-End-Developer-in-2020.png"
+                                alt="course" />
+
+                        </div>
+                        <div class="course-content">
+
+                            <div class="course-info">
+                                <h3>Learrn Python</h3>
+
+
+                                <div class="course-creator-and-time">
+                                    <div class="course-creator">
+                                        <img src="https://avatar.iran.liara.run/public/36" alt="creator">
+                                        <div>
+                                            <p>John Doe</p>
+                                            <span>john_doe</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="course-time">
+                                        <b> <i class="fa-solid fa-video"></i>10 Lessons</b>
+                                        <!-- <b> <i class="fa-solid fa-clock"></i>2h 30m</b> -->
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="more-info">
+
+
+                                <div class="course-progress">
+                                    <span>50%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 50%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="course-item blur-bg pos1">
+                    <a href="pages/course.html">
+                        <div class="course-thumbnail">
+                            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20201111215809/How-to-Become-a-Front-End-Developer-in-2020.png"
+                                alt="course" />
+
+                        </div>
+                        <div class="course-content">
+
+                            <div class="course-info">
+                                <h3>Learrn Python</h3>
+
+
+                                <div class="course-creator-and-time">
+                                    <div class="course-creator">
+                                        <img src="https://avatar.iran.liara.run/public/36" alt="creator">
+                                        <div>
+                                            <p>John Doe</p>
+                                            <span>john_doe</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="course-time">
+                                        <b> <i class="fa-solid fa-video"></i>10 Lessons</b>
+                                        <!-- <b> <i class="fa-solid fa-clock"></i>2h 30m</b> -->
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="more-info">
+
+
+                                <div class="course-progress">
+                                    <span>50%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 50%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="course-item blur-bg pos1">
+                    <a href="pages/course.html">
+                        <div class="course-thumbnail">
+                            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20201111215809/How-to-Become-a-Front-End-Developer-in-2020.png"
+                                alt="course" />
+
+                        </div>
+                        <div class="course-content">
+
+                            <div class="course-info">
+                                <h3>Learrn Python</h3>
+
+
+                                <div class="course-creator-and-time">
+                                    <div class="course-creator">
+                                        <img src="https://avatar.iran.liara.run/public/36" alt="creator">
+                                        <div>
+                                            <p>John Doe</p>
+                                            <span>john_doe</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="course-time">
+                                        <b> <i class="fa-solid fa-video"></i>10 Lessons</b>
+                                        <!-- <b> <i class="fa-solid fa-clock"></i>2h 30m</b> -->
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="more-info">
+
+
+                                <div class="course-progress">
+                                    <span>50%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 50%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="course-item blur-bg pos1">
+                    <a href="pages/course.html">
+                        <div class="course-thumbnail">
+                            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20201111215809/How-to-Become-a-Front-End-Developer-in-2020.png"
+                                alt="course" />
+
+                        </div>
+                        <div class="course-content">
+
+                            <div class="course-info">
+                                <h3>Learrn Python</h3>
+
+
+                                <div class="course-creator-and-time">
+                                    <div class="course-creator">
+                                        <img src="https://avatar.iran.liara.run/public/36" alt="creator">
+                                        <div>
+                                            <p>John Doe</p>
+                                            <span>john_doe</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="course-time">
+                                        <b> <i class="fa-solid fa-video"></i>10 Lessons</b>
+                                        <!-- <b> <i class="fa-solid fa-clock"></i>2h 30m</b> -->
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="more-info">
+
+
+                                <div class="course-progress">
+                                    <span>50%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 50%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="course-item blur-bg pos1">
+                    <a href="pages/course.html">
+                        <div class="course-thumbnail">
+                            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20201111215809/How-to-Become-a-Front-End-Developer-in-2020.png"
+                                alt="course" />
+
+                        </div>
+                        <div class="course-content">
+
+                            <div class="course-info">
+                                <h3>Learrn Python</h3>
+
+
+                                <div class="course-creator-and-time">
+                                    <div class="course-creator">
+                                        <img src="https://avatar.iran.liara.run/public/36" alt="creator">
+                                        <div>
+                                            <p>John Doe</p>
+                                            <span>john_doe</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="course-time">
+                                        <b> <i class="fa-solid fa-video"></i>10 Lessons</b>
+                                        <!-- <b> <i class="fa-solid fa-clock"></i>2h 30m</b> -->
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="more-info">
+
+
+                                <div class="course-progress">
+                                    <span>50%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 50%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="course-item blur-bg pos1">
+                    <a href="pages/course.html">
+                        <div class="course-thumbnail">
+                            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20201111215809/How-to-Become-a-Front-End-Developer-in-2020.png"
+                                alt="course" />
+
+                        </div>
+                        <div class="course-content">
+
+                            <div class="course-info">
+                                <h3>Learrn Python</h3>
+
+
+                                <div class="course-creator-and-time">
+                                    <div class="course-creator">
+                                        <img src="https://avatar.iran.liara.run/public/36" alt="creator">
+                                        <div>
+                                            <p>John Doe</p>
+                                            <span>john_doe</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="course-time">
+                                        <b> <i class="fa-solid fa-video"></i>10 Lessons</b>
+                                        <!-- <b> <i class="fa-solid fa-clock"></i>2h 30m</b> -->
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="more-info">
+
+
+                                <div class="course-progress">
+                                    <span>50%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 50%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="course-item blur-bg pos1">
+                    <a href="pages/course.html">
+                        <div class="course-thumbnail">
+                            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20201111215809/How-to-Become-a-Front-End-Developer-in-2020.png"
+                                alt="course" />
+
+                        </div>
+                        <div class="course-content">
+
+                            <div class="course-info">
+                                <h3>Learrn Python</h3>
+
+
+                                <div class="course-creator-and-time">
+                                    <div class="course-creator">
+                                        <img src="https://avatar.iran.liara.run/public/36" alt="creator">
+                                        <div>
+                                            <p>John Doe</p>
+                                            <span>john_doe</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="course-time">
+                                        <b> <i class="fa-solid fa-video"></i>10 Lessons</b>
+                                        <!-- <b> <i class="fa-solid fa-clock"></i>2h 30m</b> -->
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="more-info">
+
+
+                                <div class="course-progress">
+                                    <span>50%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 50%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+    </main>
+
+
+
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <!-- <script src="../js/courses.js"></script> -->
+
+
+</body>
+
+</html>
