@@ -1,4 +1,5 @@
 @import url(main.css);
+@import url(dashboard.css);
 
 .course-wrapper {
     margin-top: 5rem;
@@ -6,6 +7,25 @@
     grid-template-columns: 1.5fr 1fr;
     grid-template-rows: 1fr;
     gap: 3rem;
+}
+
+.course-wrapper .course-progress,
+.course-wrapper button.continue-learning {
+    display: none;
+}
+
+.course-wrapper.enrolled .side-card .course-price-info,
+.course-wrapper.enrolled .side-card .course-payment-info button.enroll-now {
+    display: none;
+}
+
+.course-wrapper.enrolled .side-card .course-progress,
+.course-wrapper.enrolled .side-card .course-payment-info button.continue-learning {
+    display: flex;
+}
+
+.course-wrapper.enrolled .side-card .course-payment-info button.continue-learning {
+    display: block;
 }
 
 .course-wrapper .course-data {
@@ -381,21 +401,27 @@
     margin-left: .5rem;
 }
 
-.course-badges {
+.course-badges,
+.course-points {
     display: flex;
     flex-direction: column;
     gap: .5rem;
+    width: 25%;
 }
 
-.course-badges .badges {
+.course-badges .badges,
+.course-points .points {
     display: grid;
-    grid-template-columns: repeat(2, 50px);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     position: relative;
+    width: 100%;
+    gap: .5rem;
 }
 
 
- .badge {
+.badge,
+.points-item {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -405,13 +431,29 @@
     cursor: pointer;
 }
 
- .badge:hover .badge-info-card {
+.course-points .points .points-item {
+    gap: .3rem;
+    justify-content: center;
+    align-items: center;
+    background: var(--fourth-color);
+    border-radius: var(--border-r-1);
+    color: var(--main-color);
+    font-size: .8rem;
+    font-weight: 700;
+    aspect-ratio: 1/1;
+}
+
+.course-points .points .points-item i {
+    font-size: 1.1rem;
+}
+
+.badge:hover .badge-info-card {
     z-index: 99999999999999999999999999999999999999;
     opacity: 1;
     transition: var(--transition-1);
 }
 
- .badge .badge-info-card {
+.badge .badge-info-card {
     position: absolute;
     top: 0;
     left: calc(-200px - .5rem);
@@ -433,24 +475,24 @@
 }
 
 
- .badge .badge-info-card h5 {
+.badge .badge-info-card h5 {
     font-size: .8rem;
     font-weight: 600;
     margin: 0;
     font-family: var(--secondary-font);
 }
 
- .badge .badge-info-card p {
+.badge .badge-info-card p {
     font-size: .6rem !important;
     font-family: var(--secondary-font);
     /* font-weight: 400; */
 }
 
- img {
+img {
     width: 100%;
 }
 
- .badge-info-card .badge-rank-info {
+.badge-info-card .badge-rank-info {
     display: flex;
     justify-content: space-between;
     align-items: center;

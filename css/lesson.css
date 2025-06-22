@@ -1,0 +1,318 @@
+@import url(main.css);
+@import url(dashboard.css);
+
+.navbar {
+    position: static;
+}
+
+.lesson-page {
+    display: grid;
+    grid-template-columns: .7fr 2fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+}
+
+.lesson-page .navbar {
+    grid-column: 1/3;
+    grid-row: 1/1;
+}
+
+.lesson-page .side-navbar {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    border-radius: 0;
+    height: 100%;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    gap: 2rem;
+    overflow-y: auto;
+}
+
+
+.lesson-page .side-navbar::-webkit-scrollbar {
+    background: transparent;
+    width: 5px;
+}
+
+
+.lesson-page .side-navbar::-webkit-scrollbar-thumb {
+    background: rgba(150, 150, 150, 0.226);
+}
+
+.lesson-page .side-navbar::before {
+    opacity: 0;
+}
+
+.lesson-page .side-navbar .course-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: .5rem;
+}
+
+.lesson-page .side-navbar .course-title h2 {
+    max-lines: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.lesson-page .lesson-content {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    height: 100%;
+    padding: 3rem 10%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 2rem;
+}
+
+.lesson-page .lesson-content h1 {
+    font-size: 2.5rem;
+}
+
+.side-navbar .lessons-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: 1.5rem;
+    /* margin-top: 1rem; */
+}
+
+.side-navbar .lessons-list .lesson-list-item a {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: .3rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--main-text-color);
+    transition: var(--transition-2);
+    text-decoration: none;
+}
+
+.side-navbar .lessons-list .lesson-list-item a i {
+    color: var(--main-color);
+}
+
+.side-navbar .lessons-list .lesson-list-item a:hover p {
+    max-height: 2rem;
+    transition: var(--transition-1);
+}
+
+.side-navbar .lessons-list .lesson-list-item a .lesson-link-text {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+
+.side-navbar .lessons-list .lesson-list-item a p {
+    font-size: .8rem;
+    overflow: hidden;
+    max-height: 0;
+    transition: var(--transition-2);
+    font-family: var(--secondary-font);
+    color: var(--dark-gray-color);
+    font-weight: 400;
+    max-lines: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+.lesson-page .lesson-content .lesson-text{
+    font-size: .9rem;
+    font-family: var(--secondary-font);
+    color: var(--dark-gray-color);
+    font-weight: 400;
+    
+}
+
+
+.video__container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.video__container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+
+}
+
+
+.video__container:hover .controlls {
+    transform: translateY(0);
+    transition: var(--transition-1);
+}
+
+.video__container .controlls {
+    position: absolute;
+    bottom: 0%;
+    transform: translateY(98%);
+    left: 0%;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: .5rem 1rem;
+    transition: var(--transition-2);
+    background: linear-gradient(to top,
+            #000,
+            transparent 100%);
+}
+
+.videoDurationBar__container {
+    width: 100%;
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.videoDurationBar {
+    width: 100%;
+    outline: none;
+    border-radius: none;
+    transition: 0.3s;
+    color: #fff;
+    height: 5px;
+
+}
+
+.videoDurationBar::-webkit-slider-thumb {
+
+    opacity: 0;
+}
+
+.videoDurationBar:hover::-webkit-slider-thumb {
+    opacity: 1;
+}
+
+.controlls .buttons,
+.controlls .rightSide__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controlls .rightSide__buttons {
+    gap: 1rem;
+}
+
+.controlls .btnController {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    color: #fff;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 .5rem;
+}
+
+.controlls .videoVolume__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    margin-left: 1rem;
+}
+
+.controlls .videoVolume__container input {
+    width: 0;
+    opacity: 0;
+    height: 5px;
+}
+
+.controlls .videoVolume__container:hover input {
+    width: 80px;
+    opacity: 1;
+}
+
+.time {
+    font-size: .9rem;
+}
+
+.controlls .speedContainer {
+    position: relative;
+
+}
+
+
+.controlls .speedContainer .dropDown.show {
+    opacity: 1;
+    display: flex;
+}
+
+.controlls .speedContainer .dropDown {
+    background: #ddd;
+    list-style: none;
+    position: absolute;
+    top: -10.3rem;
+    right: 1rem;
+    border-radius: .3rem;
+    color: #111;
+    opacity: 0;
+    transition: var(--transition-1);
+    overflow: hidden;
+    display: none;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem;
+
+}
+
+
+
+.controlls .speedContainer .dropDown li {
+    cursor: pointer;
+    min-width: 100px;
+    font-size: .9rem;
+}
+
+.controlls .videoVolume__container #timeDisplay {
+    font-weight: 600;
+    color: #fff;
+    font-family: var(--secondary-font);
+    font-size: .9rem;
+}
+
+.lesson-page .lesson-content .lesson-content-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}

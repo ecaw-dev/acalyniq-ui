@@ -1,5 +1,6 @@
 @import url(main.css);
 @import url(course.css);
+
 .profile-icon {
     width: 40px;
     height: 40px;
@@ -8,10 +9,17 @@
     border: 2px solid var(--tertiary-color);
     /* margin-bottom: 0; */
     margin-inline-start: 1rem;
+
 }
 
 .dashboard-wrapper {
     margin-top: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 3rem;
 }
 
 .dashboard-wrapper .top-bar-info {
@@ -19,12 +27,12 @@
     grid-template-columns: repeat(2, 200px) 1fr;
     grid-template-rows: repeat(2, 1fr);
     gap: 2rem;
-    margin-bottom: 2rem;
+    width: 100%;
 }
 
 .dashboard-wrapper .top-bar-info .top-bar-info-item:not(:last-child) {
     /* background: var(--fourth-color); */
-    border-radius: 10px;
+    border-radius: var(--border-r-2);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,7 +41,7 @@
     min-height: 120px;
 }
 
-.dashboard-wrapper .top-bar-info .top-bar-info-item:not(:last-child)::before{
+.dashboard-wrapper .top-bar-info .top-bar-info-item:not(:last-child)::before {
     opacity: .5;
 }
 
@@ -78,7 +86,7 @@
 .dashboard-wrapper .top-bar-info .top-bar-info-item.rank {
     grid-column: 3/4;
     grid-row: 1/3;
-    padding: 2rem;
+    padding: 1.5rem 2rem;
     overflow: visible;
 }
 
@@ -96,7 +104,8 @@
     font-size: 2rem;
 }
 
-.dashboard-wrapper .continue-learning-container {
+.dashboard-wrapper .continue-learning-container,
+.dashboard-wrapper .completed-courses-container {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 30%;
@@ -109,28 +118,34 @@
     /* padding-right: 10%; */
 }
 
-.dashboard-wrapper .continue-learning-container::-webkit-scrollbar {
+.dashboard-wrapper .continue-learning-container::-webkit-scrollbar,
+.dashboard-wrapper .completed-courses-container::-webkit-scrollbar {
     background: transparent;
     height: 6px;
 }
 
 
-.dashboard-wrapper .continue-learning-container::-webkit-scrollbar-thumb {
+.dashboard-wrapper .continue-learning-container::-webkit-scrollbar-thumb,
+.dashboard-wrapper .completed-courses-container::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(1rem);
     border-radius: 10px;
 }
 
-.dashboard-wrapper .continue-learning-container::-webkit-scrollbar-thumb:hover {
+.dashboard-wrapper .continue-learning-container::-webkit-scrollbar-thumb:hover,
+.dashboard-wrapper .completed-courses-container::-webkit-scrollbar-thumb:hover {
     background: var(--main-color);
 }
 
-.dashboard-wrapper .continue-learning-container .course-item .more-info {
+.dashboard-wrapper .continue-learning-container .course-item .more-info,
+.dashboard-wrapper .completed-courses-container .course-item .more-info {
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.dashboard-wrapper .continue-learning-container .course-item .course-progress {
+.course-progress,
+.course-progress {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -138,22 +153,42 @@
     gap: .5rem;
     font-size: 1.1rem;
     font-weight: 700;
-    font-family: var(--secondary-font);
+    font-family: var(--main-font);
     color: var(--main-color);
 }
 
-.dashboard-wrapper .continue-learning-container .course-item .progress {
+.course-progress span,
+.course-progress span {
+    background: var(--fourth-color);
+    padding: .5rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-r-1);
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+
+.progress,
+.progress {
     width: 100%;
     height: 6px;
-    background: #fff;
+    /* background: #fff; */
     border-radius: 5px;
 }
 
-.dashboard-wrapper .continue-learning-container .course-item .progress .progress-bar {
+.progress .progress-bar,
+.progress .progress-bar {
     width: 100%;
     height: 100%;
     background: var(--fourth-color);
     border-radius: 5px;
+}
+
+.progress .progress-bar {
+    width: 100%;
+    background: var(--main-color);
 }
 
 .top-bar-info-item.rank {
@@ -169,10 +204,10 @@
     overflow: visible;
 }
 
-.top-bar-info-item.rank .share-cta{
+.top-bar-info-item.rank .share-cta {
     position: absolute;
     right: 2rem;
-    top: 2.5rem;
+    top: 2rem;
     font-size: .8rem;
     cursor: pointer;
     color: var(--dark-gray-color);
@@ -182,7 +217,7 @@
 
 .top-bar-info-item.rank .share-cta::after {
     content: "\f1d8";
-   font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Free";
     font-weight: 900;
     margin-left: .5rem;
 
@@ -203,19 +238,20 @@
     /* background: red; */
     margin-top: 1rem;
     overflow: visible;
+    gap: 1rem;
 }
 
 .rank-section .rank-progress .rank-badge {
     display: flex;
     justify-content: center;
     align-items: center;
-   flex-direction: column;
-   font-size: .6rem;
-   font-weight: 600;
-   width: 120px;
+    flex-direction: column;
+    font-size: .6rem;
+    font-weight: 600;
+    width: 130px;
 }
 
-.rank-section .rank-progress .rank-badge > b {
+.rank-section .rank-progress .rank-badge>b {
     font-size: .9rem;
     font-family: var(--main-font);
     line-height: .5rem;
@@ -227,13 +263,18 @@
 
 .rank-section .rank-progress .rank-progress-bar {
     width: 100%;
-    height: 1rem;
-    background: #fff;
+    height: 10px;
+    /* background: #fff; */
     border-radius: var(--border-r-2);
     position: relative;
+    overflow: visible;
 }
 
-.rank-section .rank-progress .rank-progress-bar span {
+.rank-section .rank-progress .rank-progress-bar::before {
+    opacity: 0;
+}
+
+.rank-section .rank-progress .rank-progress-bar .indicator {
     position: absolute;
     top: -3.3rem;
     left: 15%;
@@ -250,12 +291,12 @@
     flex-direction: column;
 }
 
-.rank-section .rank-progress .rank-progress-bar span b {
+.rank-section .rank-progress .rank-progress-bar .indicator b {
     font-size: .6rem;
     font-family: var(--secondary-font);
 }
 
-.rank-section .rank-progress .rank-progress-bar span::after {
+.rank-section .rank-progress .rank-progress-bar .indicator::after {
     content: "\f0d7";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
@@ -265,9 +306,10 @@
     left: 50%;
     transform: translateX(-50%);
 }
+
 .rank-section .rank-progress .rank-progress-bar .rank-progress-bar-fill {
     height: 100%;
-    background: var(--fourth-color);
+    background: var(--main-color);
     border-radius: var(--border-r-2);
     width: 15%;
 }
@@ -284,7 +326,7 @@
     margin-top: 1rem;
 }
 
-.rank-section .current-rank > span {
+.rank-section .current-rank>span {
     font-size: .8rem;
     font-weight: 600;
     font-family: var(--secondary-font);
@@ -294,23 +336,27 @@
     width: 70px;
 }
 
-.rank-section .current-rank > p {
-    font-size: .6rem !important; 
+.rank-section .current-rank>p {
+    font-size: .6rem !important;
 }
 
-.rank-section .next-rank img{
-    filter: drop-shadow(0 0 5px var(--main-color)) drop-shadow(0 0 6px var(--main-color));
+.rank-section .next-rank img {
     animation: pulse 10s infinite;
 }
 
 @keyframes pulse {
     0% {
         transform: scale(1);
+    filter: drop-shadow(0 0 0 gold) drop-shadow(0 0 0 gold);
     }
+
     50% {
         transform: scale(1.1);
+    filter: drop-shadow(0 0 5px gold) drop-shadow(0 0 6px gold);
     }
+
     100% {
         transform: scale(1);
+    filter: drop-shadow(0 0 0 gold) drop-shadow(0 0 0 gold);
     }
 }

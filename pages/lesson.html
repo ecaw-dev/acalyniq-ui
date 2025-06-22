@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/lesson.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>AcalynIQ | Course</title>
+</head>
+
+<body>
+    <main class="lesson-page">
+        <nav class="navbar scrolling">
+            <a class="logo" href="../index.html">
+                <img src="../img/AcalynIQ.png" alt="logo" class="logo-image" />
+            </a>
+            <ul class="nav-list">
+                <div class="nav-links">
+                    <li><a href="../index.html" class="nav-link">Dashboard</a></li>
+                    <!-- <li><a href="../index.html#courses" class="nav-link">Courses</a></li> -->
+                    <li><a href="./courses.html" class="nav-link">Courses</a></li>
+                    <li><a href="./videos.html" class="nav-link">Videos</a></li>
+                    <li><a href="./contact.html" class="nav-link">Contact</a></li>
+                </div>
+
+                <div class="auth-links">
+                    <li>
+                        <a href="./profile.html" class="">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+                                class="profile-icon" alt="">
+                        </a>
+                    </li>
+                </div>
+
+            </ul>
+        </nav>
+
+        <aside class="side-navbar blur-bg">
+            <div class="course-title">
+                <h2>Learn Python here now in the ultimate course</h2>
+                <div class="course-progress">
+                    <span>50%</span>
+                    <div class="progress blur-bg">
+                        <div class="progress-bar" style="width: 50%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <ol class="lessons-list">
+                <li class="lesson-list-item">
+                    <a href="#" class="lesson-link">
+                        <div class="lesson-link-text">
+                            <span class="lesson-title">Intro</span>
+                            <p class="lesson-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse praesentium cupiditate
+                                quae sed facilis quam eaque
+                                recusandae officiis tempora neque. Lorem ipsum, dolor sit amet consectetur adipisicing
+                                elit. Consequuntur saepe qui placeat, ab exercitationem animi praesentium voluptate
+                                voluptatem veritatis necessitatibus quam eum minus consequatur illum excepturi tempore
+                                deleniti, consectetur officia?</p>
+                        </div>
+
+                        <b class="completed">
+                            <i class="fa-solid fa-check"></i></b>
+                    </a>
+
+
+                </li>
+
+                <li class="lesson-list-item">
+                    <a href="#" class="lesson-link">
+                        <div class="lesson-link-text">
+                            <span class="lesson-title">Variables</span>
+                            <p class="lesson-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse praesentium cupiditate
+                                quae sed facilis
+                                quam eaque
+                                recusandae officiis tempora neque.</p>
+                        </div>
+                    </a>
+
+
+                </li>
+
+                <li class="lesson-list-item">
+                    <a href="#" class="lesson-link">
+                        <div class="lesson-link-text">
+                            <span class="lesson-title">Design Patters</span>
+                            <p class="lesson-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse praesentium cupiditate
+                                quae sed facilis
+                                quam eaque
+                                recusandae officiis tempora neque.</p>
+                        </div>
+
+
+                    </a>
+                </li>
+
+                <li class="lesson-list-item">
+                    <a href="#" class="lesson-link">
+                        <div class="lesson-link-text">
+                            <span class="lesson-title">Outro</span>
+                            <p class="lesson-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse praesentium cupiditate
+                                quae sed facilis
+                                quam eaque
+                                recusandae officiis tempora neque.</p>
+                        </div>
+                
+                
+                    </a>
+                </li>
+            </ol>
+        </aside>
+
+
+        <section class="lesson-content">
+            <h1 class="lesson-title">
+                Intro
+            </h1>
+            <div class="lesson-video">
+                <div class="video__container" id="videoContainer">
+                    <video id="video" src="../videos/video_placeholder.mp4" onclick="togglePlay()"></video>
+
+                    <div class="controlls">
+                        <div class="videoDurationBar__container">
+                            <input type="range" id="progressBar" class="videoDurationBar" min="0" value="0" />
+                        </div>
+
+                        <div class="buttons">
+                            <button class="btnController" onclick="skip(-5)">
+                                <i class="fa-solid fa-backward"></i>
+                            </button>
+                            <button class="btnController playPauseBtn" onclick="togglePlay()">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                            <button class="btnController" onclick="skip(5)">
+                                <i class="fa-solid fa-forward"></i>
+                            </button>
+
+                            <div class="videoVolume__container">
+                                <button class="btnController" onclick="toggleMute()">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                    <!-- <i class="fa-solid fa-volume-xmark"></i> -->
+                                </button>
+                                <input type="range" id="volumeInput" min="0" max="1" step="1" value="0" />
+                                <div class="time" id="timeDisplay">00:00 / 00:00</div>
+                            </div>
+                        </div>
+
+                        <div class="rightSide__buttons">
+                            <div class="speedContainer" id="speedContainer">
+                                <ul class="dropDown" id="speedDropDown">
+                                    <li onclick="setSpeed(2)">x2</li>
+                                    <li onclick="setSpeed(1.5)">x1.5</li>
+                                    <li onclick="setSpeed(1)">normal</li>
+                                    <li onclick="setSpeed(0.5)">x0.5</li>
+                                    <li onclick="setSpeed(0.2)">x0.2</li>
+                                </ul>
+                                <button class="btnController" onclick="toggleSpeedMenu()">
+                                    <i class="fa-solid fa-gear"></i>
+                                </button>
+                            </div>
+                            <button class="btnController" onclick="togglePIP()">
+                                <i class='bx bxs-videos'></i>
+                            </button>
+                            <button class="btnController expandBtn" onclick="toggleFullscreen()">
+                                <i class="fa-solid fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="lesson-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, officiis! Commodi
+                itaque ullam repellendus corrupti sint in sed molestias dicta voluptatum numquam. Inventore facilis eum
+                accusamus harum? Nihil dicta quibusdam recusandae neque ducimus illum fugit beatae nemo vero dolor illo,
+                corrupti perspiciatis rerum, at repellat! Iure illo ab, nemo deleniti veniam possimus quam assumenda
+                placeat cumque, quis rerum? Natus rerum facilis autem molestias assumenda nihil? Fugit fugiat maxime,
+                officia rem asperiores animi nesciunt dolore nihil beatae at laudantium, consequatur ex? Cum ratione
+                consequatur dolorum exercitationem, iusto iure odit tenetur praesentium non aliquid. Nihil esse
+                exercitationem veritatis voluptates possimus sed facilis illum adipisci asperiores numquam non ipsum
+                eveniet blanditiis nobis, distinctio et ab quaerat natus maiores! Aperiam mollitia, labore ducimus
+                dolores nulla recusandae nemo consequatur voluptatem ex assumenda alias. Aperiam amet exercitationem,
+                sed dolore architecto perferendis rem provident cum harum obcaecati voluptas ab laudantium ullam aut ut
+                magni quaerat neque nulla repellendus dicta perspiciatis eligendi itaque. Repudiandae magni amet maxime?
+                Eligendi, temporibus id ad provident ut consequatur ab non voluptatem minus quaerat, veritatis earum
+                iste? Iusto soluta eius eos dolorem expedita tenetur hic? Est rerum veniam id ut culpa officiis dolorem
+                suscipit quia consectetur, blanditiis eos minus fuga reiciendis magnam aliquid tenetur omnis, sit
+                sapiente cum obcaecati praesentium aliquam. Impedit voluptate dolores aliquid, quos fugiat aperiam quod
+                cupiditate amet veniam praesentium possimus sequi rem hic natus ducimus non consequatur nisi dolor omnis
+                quasi. Quibusdam in aspernatur a voluptatibus enim dolore et, fuga eaque, mollitia quaerat rerum.
+                Reprehenderit vel quibusdam dolore quo obcaecati sint placeat, inventore tenetur at error sequi maiores.
+                Praesentium incidunt ut, iste impedit libero quasi ratione obcaecati mollitia odit quidem est
+                dignissimos, deserunt quas unde. Sunt, alias ducimus. Dolore quia vero dolores officiis fugiat tempora!
+                Nam fuga pariatur veritatis sunt repellendus tempore rem, alias ipsam deserunt asperiores distinctio
+                ipsa eius hic ut dignissimos. Quasi accusamus iusto minus quod laboriosam quisquam rerum eaque
+                voluptatibus. Voluptate necessitatibus maiores vel deserunt harum! Architecto quae officia eum
+                laudantium odio. Autem voluptas voluptates corporis quas quisquam, sapiente eos quasi molestias ullam
+                dolorum, sunt eveniet cupiditate cum sit cumque blanditiis rem omnis recusandae est. In, distinctio!
+                Asperiores in dolorum nobis velit, qui libero, sit ipsam tenetur optio temporibus veritatis totam quae
+                hic rem necessitatibus numquam. Doloremque inventore beatae deserunt ipsa tenetur quo reiciendis debitis
+                dicta quod quas. Quia pariatur iure ea inventore cupiditate magni laborum nam eos rerum! Hic at
+                consequatur nemo ad molestias saepe quo molestiae, labore voluptatem dignissimos, nulla quae sint ab
+                dolorem! Ipsam, repudiandae nulla. Architecto adipisci ex, a quod suscipit iure natus cumque voluptatem
+                voluptates fugit unde eius in fuga earum laudantium, reprehenderit eaque. Magnam, unde debitis
+                recusandae similique accusamus impedit autem provident neque reprehenderit quis cum deserunt ab velit
+                ratione consequatur maxime, libero id labore voluptates! Facere voluptates quaerat optio, molestiae nam,
+                consequuntur aperiam quam minima quos minus iste excepturi perferendis eaque? Expedita quam voluptates
+                dicta odio laudantium, reiciendis iste nesciunt sunt id laborum. Architecto sunt et atque. Dicta aliquam
+                similique sunt, tenetur, autem eum in fugit excepturi perferendis consequuntur, nemo error magnam
+                doloribus itaque iste nam impedit? Esse, odio ullam omnis voluptates quam voluptatibus rem explicabo
+                architecto repellat nulla vel doloribus corporis voluptatem mollitia obcaecati iure labore eum qui
+                ratione, quidem, autem neque? Soluta laborum itaque porro veniam accusantium voluptates repellat natus
+                at! Nobis atque tempore facilis adipisci neque iste perspiciatis labore voluptatibus, voluptas minima
+                maiores porro nemo libero culpa corporis, pariatur beatae explicabo quas. Fugit asperiores veritatis
+                vero. Incidunt vero hic odit sapiente facere dolores, assumenda quisquam aliquid nemo nesciunt similique
+                cumque, praesentium neque veritatis modi quibusdam molestias, perspiciatis ratione aut voluptate
+                officiis voluptatem eligendi tempore! At adipisci dolore voluptates fugiat neque non numquam, et illo,
+                ut, ipsum nesciunt temporibus dolores consectetur ipsam alias eos quasi quae! Quia atque, officiis
+                praesentium ullam mollitia deleniti, facere totam placeat veritatis tempora quae asperiores officia at
+                natus laborum explicabo dolor optio perspiciatis, dolorem commodi! Eligendi magni aut quas dignissimos
+                neque sed odio voluptatibus laudantium necessitatibus incidunt molestiae asperiores reiciendis voluptas
+                laboriosam aspernatur numquam soluta quis ab, dolorum ea blanditiis tempora nostrum harum natus?
+                Officiis, consequatur blanditiis dolor, atque impedit rerum ullam mollitia, fugiat sunt numquam aperiam
+                esse quis iste? Mollitia doloribus dicta voluptatem, blanditiis laudantium id, cupiditate unde similique
+                fugiat tempore, placeat ut. Repellat similique voluptate ipsum ut? Quasi id ipsam vitae distinctio
+                explicabo dignissimos incidunt libero blanditiis excepturi unde laboriosam voluptates, iste in impedit
+                aliquid illum voluptate pariatur molestias odio! Aliquid odio fuga repellat, ducimus amet esse voluptas
+                ad ipsam sequi laboriosam eaque quod possimus voluptatum id placeat qui atque. Temporibus incidunt iste
+                possimus id cupiditate! Mollitia aliquid quas maiores placeat tempora ipsam nisi rerum quia possimus
+                expedita nulla enim, ea reprehenderit repellat rem debitis quasi aperiam harum optio eos atque quo esse
+                animi? Ipsum laboriosam facere dolor repellat nesciunt quas quasi natus dolorem at veniam. Dolorum
+                delectus quis consequatur quia magnam. Distinctio voluptate modi atque earum qui repellat sint quam enim
+                est illum recusandae deserunt, nisi natus id ab voluptatibus placeat numquam quidem nesciunt corrupti
+                labore quaerat velit maiores doloremque. Rerum, totam quibusdam. Consequatur corrupti tenetur nisi, sunt
+                tempora eum harum nesciunt modi, dolore explicabo nemo dolorum maiores facere dolorem. Reprehenderit
+                molestiae nemo omnis minima fugit tempore a sint eligendi similique alias dignissimos inventore eaque
+                est iure nobis beatae necessitatibus vero sit nihil, culpa accusantium deleniti. Velit, eveniet
+                repellendus eligendi voluptatem cumque explicabo sequi similique nihil in, repudiandae rerum. Fugit
+                mollitia ullam quam inventore non sed, illo expedita harum perferendis maxime cum maiores officia atque
+                est. Asperiores excepturi adipisci minus deserunt modi delectus eveniet, nisi rem libero laborum
+                accusamus at error fugit provident nobis vero et dolores dolorum similique, commodi, rerum beatae! Ab
+                eaque blanditiis doloremque exercitationem sunt fugit ipsa ex recusandae libero odio dolore hic, maxime
+                dolorum quasi id deleniti, impedit voluptas sit quaerat doloribus voluptatibus dicta a corporis? Aut
+                dignissimos laboriosam debitis natus voluptate, libero maiores fugiat voluptas in nobis dolor? Dolore
+                fugiat voluptates velit repudiandae ea at recusandae, tempore harum impedit architecto, consectetur quis
+                nesciunt eaque dignissimos animi. Accusamus blanditiis tempore deleniti est totam ipsum unde.</p>
+            <div class="lesson-content-btns">
+                <a href="#" class="btn bg-white">
+                    Previous
+                </a>
+
+                <a href="#" class="btn">
+                    Next
+                </a>
+            </div>
+        </section>
+    </main>
+
+
+
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <!-- <script src="../js/navbar.js"></script> -->
+    <script>
+        const video = document.getElementById("video");
+        const progressBar = document.getElementById("progressBar");
+        const volumeInput = document.getElementById("volumeInput");
+        const timeDisplay = document.getElementById("timeDisplay");
+        const videoContainer = document.getElementById("videoContainer");
+        const speedDropDown = document.getElementById("speedDropDown");
+
+        const expandBtn = document.querySelector(".expandBtn")
+        const playPauseBtn = document.querySelector(".playPauseBtn")
+
+        video.volume = 0.5;
+
+        video.addEventListener("timeupdate", () => {
+            progressBar.value = video.currentTime;
+            updateTimeDisplay();
+        });
+
+        video.addEventListener("loadedmetadata", () => {
+            progressBar.max = video.duration;
+            console.log(video.duration);
+            updateTimeDisplay();
+        });
+
+
+        progressBar.max = video?.duration;
+
+        video.addEventListener("volumechange", () => {
+            volumeInput.value = video.volume;
+        });
+
+        video.addEventListener("ended", () => {
+            video.currentTime = 0;
+        });
+
+        progressBar.addEventListener("input", () => {
+            video.currentTime = progressBar.value;
+        });
+
+        volumeInput.addEventListener("input", () => {
+            video.volume = volumeInput.value;
+        });
+
+        function togglePlay() {
+            video.paused ? video.play() : video.pause();
+            playPauseBtn.innerHTML = video.paused ? "<i class='fa-solid fa-pause'></i>" : "<i class='fa-solid fa-play'></i>";
+        }
+
+        function skip(value) {
+            video.currentTime += value;
+        }
+
+        function toggleMute() {
+            video.volume = video.volume === 0 ? 0.5 : 0;
+            volumeInput.value = video.volume;
+        }
+
+        function togglePIP() {
+            if (document.pictureInPictureElement) {
+                document.exitPictureInPicture();
+            } else {
+                video.requestPictureInPicture();
+            }
+        }
+
+        function toggleFullscreen() {
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+                expandBtn.innerHTML = "<i class='fa-solid fa-expand'></i>"
+
+            } else {
+                videoContainer.requestFullscreen();
+                expandBtn.innerHTML = "<i class='fa-solid fa-compress'></i>"
+
+            }
+        }
+
+        function formatTime(seconds) {
+            const mins = String(Math.floor(seconds / 60)).padStart(2, '0');
+            const secs = String(Math.floor(seconds % 60)).padStart(2, '0');
+            return `${mins}:${secs}`;
+        }
+
+        function updateTimeDisplay() {
+            const current = formatTime(video.currentTime);
+            const total = formatTime(video.duration);
+            timeDisplay.textContent = `${current} / ${total}`;
+        }
+
+        updateTimeDisplay()
+
+        function toggleSpeedMenu() {
+            speedDropDown.classList.toggle("show");
+        }
+
+        function setSpeed(speed) {
+            video.playbackRate = speed;
+            speedDropDown.classList.remove("show");
+        }
+
+    </script>
+
+</body>
+
+</html>
