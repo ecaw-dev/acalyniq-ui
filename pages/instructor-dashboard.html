@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <title>AcalynIQ | Dashboard</title>
+</head>
+
+<body>
+
+    <nav class="navbar scrolling">
+        <a class="logo" href="../index.html">
+            <img src="../img/AcalynIQ.png" alt="logo" class="logo-image" />
+        </a>
+        <ul class="nav-list">
+            <div class="nav-links">
+                <li><a href="../index.html" class="nav-link">Dashboard</a></li>
+                <!-- <li><a href="../index.html#courses" class="nav-link">Courses</a></li> -->
+                <li><a href="./courses.html" class="nav-link">Courses</a></li>
+                <li><a href="./videos.html" class="nav-link">Videos</a></li>
+                <li><a href="./contact.html" class="nav-link">Contact</a></li>
+            </div>
+
+            <div class="auth-links">
+                <li>
+                    <a href="./profile.html" class="">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+                            class="profile-icon" alt="">
+                    </a>
+                </li>
+            </div>
+
+        </ul>
+    </nav>
+
+    <main class="dashboard-wrapper padding">
+        <section class="top-bar-info">
+            <div class="top-bar-info-item blur-bg pos1">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h2>+10k</h2>
+                <p>Students</p>
+            </div>
+            <div class="top-bar-info-item blur-bg pos2">
+                <i class="fa-solid fa-video"></i>
+                <h2>+10</h2>
+                <p>Videos Published</p>
+            </div>
+            <div class="top-bar-info-item blur-bg">
+                <i class="fa-solid fa-star"></i>
+                <h2>4.5</h2>
+                <p>Perfect Rating</p>
+            </div>
+            <div class="top-bar-info-item blur-bg pos4">
+                <i class="fa-solid fa-money-bill"></i>
+                <h2>+<span class="currency">EGP</span> 2000</h2>
+                <p>Earned this month</p>
+            </div>
+
+            <div class="top-bar-info-item blur-bg pos1 statics">
+                <div class="header">
+                    <h2>Enrollments</h2>
+                    <ul class="staticts-nav">
+                        <li class="statics-nav-item active">
+                            Courses
+                        </li>
+                        <li class="statics-nav-item">
+                            Videos
+                        </li>
+                        <li class="statics-nav-item">
+                            Earnings
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="slider">
+                    <div class="slide-container">
+                        <div class="courses-statics">
+                            <canvas id="myChart1"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="slide-container active">
+                        <div class="videos-statics">
+                            <div class="top-5-videos-likes">
+                                <canvas id="myChart2"></canvas>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="courses-published">
+            <div class="header">
+                <div class="heading">
+                    <i class="fa-solid fa-book-open"></i>
+                    <h2>Courses Published</h2>
+                </div>
+
+                <a href="#" class="btn">
+                    <i class="fa-solid fa-plus-circle"></i>
+                    <span>Create new</span>
+                </a>
+            </div>
+
+            <div class="courses-published-container">
+                <div class="course-item blur-bg pos1">
+                    <a href="pages/course.html">
+                        <div class="course-thumbnail">
+                            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20201111215809/How-to-Become-a-Front-End-Developer-in-2020.png"
+                                alt="course" />
+
+                        </div>
+                        <div class="course-content">
+
+                            <div class="course-info">
+                                <h3>Learrn Python</h3>
+
+
+                                <div class="course-creator-and-time">
+                                    <div class="course-creator">
+                                        <img src="" alt="creator">
+                                        <div>
+                                            <p>John Doe</p>
+                                            <span>john_doe</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="course-time">
+                                        <b> <i class="fa-solid fa-video"></i>10 Lessons</b>
+                                        <!-- <b> <i class="fa-solid fa-clock"></i>2h 30m</b> -->
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="course-buttons">
+                                <a href="#" class="btn bg-white">Edit</a>
+                                <a href="#" class="btn">View</a>
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <!-- <script src="../js/courses.js"></script> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        const ctx = document.getElementById('myChart1');
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [
+                    'Jan', 'Feb', 'Mar', 'Apr',
+                    'May', 'Jun', 'Jul', 'Aug',
+                    'Sep', 'Oct', 'Nov', 'Dec'
+                ],
+                datasets: [{
+                    label: 'New Students In 2025',
+                    data: [50, 80, 120, 90, 150, 200, 180, 220, 210, 250, 270, 300],
+                    borderWidth: 2,
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    tension: 0.4, // smooth curves
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Students'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Month'
+                        }
+                    }
+                }
+            }
+        });
+
+        const ctx2 = document.getElementById('myChart2');
+
+        new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: [
+                    'Intro to Python',
+                    'React Basics',
+                    'Advanced JS',
+                    'CSS Animations',
+                    'MongoDB for Beginners'
+                ],
+                datasets: [{
+                    label: 'Watch Time (Minutes)',
+                    data: [350, 420, 210, 180, 290],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.5)',
+                        'rgba(54, 162, 235, 0.5)',
+                        'rgba(255, 206, 86, 0.5)',
+                        'rgba(75, 192, 192, 0.5)',
+                        'rgba(153, 102, 255, 0.5)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Watch Time (Minutes)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Videos'
+                        }
+                    }
+                }
+            }
+        });
+
+    </script>
+
+
+</body>
+
+</html>

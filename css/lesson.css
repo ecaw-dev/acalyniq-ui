@@ -30,10 +30,37 @@
     flex-direction: column;
     justify-content: start;
     align-items: stretch;
-    gap: 2rem;
     overflow-y: auto;
 }
 
+.lesson-page .side-navbar .back-to-dashboard {
+    display: flex;
+    justify-content: start;
+    align-items: stretch;
+    gap: 2rem;
+    font-size: .9rem;
+    margin-bottom: .5rem;
+}
+
+.lesson-page .side-navbar .back-to-dashboard a {
+    color: var(--dark-gray-color);
+    text-decoration: none;
+    transition: var(--transition-2);
+}
+
+.lesson-page .side-navbar .back-to-dashboard:hover a {
+    color: var(--main-color);
+    transition: var(--transition-1);
+}
+
+.lesson-page .side-navbar .back-to-dashboard a i {
+    transition: var(--transition-2);
+}
+
+.lesson-page .side-navbar .back-to-dashboard:hover a i {
+    transform: translateX(-5px);
+    transition: var(--transition-1);
+}
 
 .lesson-page .side-navbar::-webkit-scrollbar {
     background: transparent;
@@ -55,6 +82,7 @@
     justify-content: start;
     align-items: start;
     gap: .5rem;
+    margin-bottom: 2rem;
 }
 
 .lesson-page .side-navbar .course-title h2 {
@@ -91,9 +119,14 @@
     /* margin-top: 1rem; */
 }
 
+
+.side-navbar .lessons-list .lesson-list-item.active {
+    color: var(--main-color);
+}
+
 .side-navbar .lessons-list .lesson-list-item a {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: start;
     gap: .3rem;
     font-size: 1.2rem;
@@ -107,11 +140,6 @@
     color: var(--main-color);
 }
 
-.side-navbar .lessons-list .lesson-list-item a:hover p {
-    max-height: 2rem;
-    transition: var(--transition-1);
-}
-
 .side-navbar .lessons-list .lesson-list-item a .lesson-link-text {
     display: flex;
     justify-content: start;
@@ -119,29 +147,14 @@
     flex-direction: column;
 }
 
-.side-navbar .lessons-list .lesson-list-item a p {
-    font-size: .8rem;
-    overflow: hidden;
-    max-height: 0;
-    transition: var(--transition-2);
-    font-family: var(--secondary-font);
-    color: var(--dark-gray-color);
-    font-weight: 400;
-    max-lines: 2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
 
 
-.lesson-page .lesson-content .lesson-text{
+.lesson-page .lesson-content .lesson-text {
     font-size: .9rem;
     font-family: var(--secondary-font);
     color: var(--dark-gray-color);
     font-weight: 400;
-    
+
 }
 
 
