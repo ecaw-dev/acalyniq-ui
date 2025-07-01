@@ -1,3 +1,5 @@
+
+
 *,
 *::before,
 *::after {
@@ -126,84 +128,6 @@ body {
     background: var(--tertiary-color) !important;
     color: var(--secondary-text-color) !important;
     transition: var(--transition-1);
-}
-
-.navbar {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem 3rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    transition: var(--transition-2);
-    border-bottom: 1px solid transparent;
-}
-
-
-
-.navbar.scrolling {
-    backdrop-filter: blur(.5rem);
-    background: rgba(255, 255, 255, 0.5);
-    padding: .7rem 3rem;
-    border-bottom-color: rgba(255, 255, 255, 0.3);
-}
-
-.navbar .logo {
-    max-width: 150px;
-}
-
-.navbar .logo img {
-    width: 100%;
-}
-
-.navbar ul,
-.navbar .auth-links,
-.navbar .nav-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    list-style: none;
-
-}
-
-.navbar ul .nav-link {
-    text-decoration: none;
-    color: var(--dark-gray-color);
-    font-family: var(--main-font);
-    font-size: 1rem;
-    font-weight: 600;
-    transition: var(--transition-1);
-    text-transform: capitalize;
-}
-
-.navbar ul .nav-links .nav-link.active {
-    color: var(--main-color);
-}
-
-.navbar ul li:hover .nav-link {
-    color: var(--main-color);
-}
-
-.navbar ul .register {
-    position: relative;
-}
-
-.navbar ul .register::after {
-    content: "";
-    position: absolute;
-    right: -0.62rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--dark-gray-color);
-    width: 3px;
-    height: 20px;
-    border-radius: 5rem;
-    background: var(--dark-gray-color);
-
 }
 
 /*====  HERO SECTION  ====*/
@@ -622,7 +546,7 @@ body {
     gap: .5rem;
     font-size: 1.2rem;
     font-weight: 700;
-    font-family: var(--secondary-font);
+    /* font-family: var(--secondary-font); */
     color: var(--main-color);
 
 }
@@ -650,7 +574,7 @@ body {
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--tertiary-color);
+    /* border: 2px solid var(--tertiary-color); */
 }
 
 .course-time {

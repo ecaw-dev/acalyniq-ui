@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/create-course.css" />
+    <title>AcalynIQ | New Course</title>
+</head>
+
+<body>
+    <main class="form-wrapper">
+
+
+        <header class="form-header">
+            <h2> <i class="fa-solid fa-book-open"></i> Create New Course</h2>
+            <p>Create a new course and start a new teaching experience.</p>
+        </header>
+        <div class="form-container">
+            <form action="" class="data-form register-form">
+
+                <div class="slides-container">
+                    <div class="form-slide active">
+                        <div class="fields-container">
+
+                            <div class="field">
+                                <label for="name">Course Name</label>
+                                <input type="text" required class="blur-bg" autocomplete="new-name" id="name"
+                                    placeholder="eg. Web Development">
+                            </div>
+
+                            <div class="form-group">
+                                <div class="field textarea-container">
+                                    <label for="description">Description</label>
+                                    <textarea type="text" required class="blur-bg" autocomplete="new-description"
+                                        id="description" placeholder="eg. Web Development"></textarea>
+
+                                </div>
+
+                                <div class="field">
+                                    <label for="">Course Objectives</label>
+                                    <div class="objectives-input-container">
+                                        <input type="text" class="blur-bg" id="objectives" placeholder="eg. Reading">
+                                        <button type="button" class="btn bg-white add-objective"><i
+                                                class="fa-solid fa-plus"></i></button>
+                                    </div>
+
+
+                                    <ul class="objectives-container"> </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-slide">
+                        <div class="fields-container">
+
+                            <div class="form-group">
+                                <div class="field">
+                                    <label for="category">Category</label>
+                                    <select name="category" class="blur-bg" id="category">
+                                        <option value="" disabled selected> -- Select Category -- </option>
+                                        <option value="Programming">Programming</option>
+                                        <option value="Web Development">Web Development</option>
+                                        <option value="Mobile Development">Mobile Development</option>
+                                        <option value="UI/UX">UI/UX</option>
+                                        <option value="Graphic Design">Graphic Design</option>
+                                        <option value="Digital Marketing">Digital Marketing</option>
+                                        <option value="Data Science">Data Science</option>
+                                        <option value="Business">Business</option>
+                                        <option value="school">School Related</option>
+                                        <option value="Mathematics">
+                                            Mathematics
+                                        </option>
+                                        <option value="Statistics">Statistics</option>
+                                        <option value="Chemistry">Chemistry</option>
+                                        <option value="Physics">Physics</option>
+                                        <option value="Biology">Biology</option>
+                                        <option value="History">History</option>
+                                        <option value="Geography">Geography</option>
+                                        <option value="English">English</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="field">
+                                    <label for="price">Price</label>
+                                    <div class="price-container blur-bg pos1">
+                                        <span class="blur-bg">EGP</span>
+                                        <input type="number" required autocomplete="new-price" id="price"
+                                            placeholder="eg. 199">
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="field upload-image-container">
+                                <label for="image" class="blur-bg"> <i class="fa-solid fa-upload"></i> Upload Course
+                                    Image</label>
+                                <input type="file" required class="blur-bg" autocomplete="new-image" id="image"
+                                    placeholder="eg. Web Development">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="slide-buttons">
+                    <button type="button" class="prev-btn btn bg-white">Back</button>
+                    <button type="submit" class="submit-btn btn">Continue</button>
+
+                    <button type="button" class="next-btn btn">Next</button>
+                </div>
+            </form>
+
+        </div>
+
+
+    </main>
+
+
+    <script src="../js/register.js"></script>
+    <script src="../js/create-course.js"></script>
+</body>
+
+</html>

@@ -3,7 +3,8 @@
 
 
 .skills-input-container,
-.grades-input-container {
+.grades-input-container,
+.objectives-input-container {
     display: flex;
     justify-content: space-between;
     align-items: center;

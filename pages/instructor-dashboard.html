@@ -26,6 +26,7 @@
         <ul class="nav-list">
             <div class="nav-links">
                 <li><a href="../index.html" class="nav-link">Dashboard</a></li>
+                <li><a href="../index.html" class="nav-link">Statics</a></li>
                 <!-- <li><a href="../index.html#courses" class="nav-link">Courses</a></li> -->
                 <li><a href="./courses.html" class="nav-link">Courses</a></li>
                 <li><a href="./videos.html" class="nav-link">Videos</a></li>
@@ -69,38 +70,28 @@
 
             <div class="top-bar-info-item blur-bg pos1 statics">
                 <div class="header">
-                    <h2>Enrollments</h2>
+                    <h2 class="statics-title">Enrollments</h2>
                     <ul class="staticts-nav">
-                        <li class="statics-nav-item active">
-                            Courses
-                        </li>
-                        <li class="statics-nav-item">
-                            Videos
-                        </li>
-                        <li class="statics-nav-item">
-                            Earnings
-                        </li>
                     </ul>
                 </div>
 
                 <div class="slider">
-                    <div class="slide-container">
+                    <div data-name="enrollments" class="slide-container  active">
                         <div class="courses-statics">
                             <canvas id="myChart1"></canvas>
                         </div>
                     </div>
 
-                    <div class="slide-container active">
+                    <div data-name="videos" class="slide-container">
                         <div class="videos-statics">
                             <div class="top-5-videos-likes">
                                 <canvas id="myChart2"></canvas>
-
                             </div>
                         </div>
                     </div>
                 </div>
 
-
+                <a href="#" class="show-more btn bg-white">View All Statistics</a>
             </div>
         </section>
 
@@ -169,111 +160,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <script>
-        const ctx = document.getElementById('myChart1');
-
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: [
-                    'Jan', 'Feb', 'Mar', 'Apr',
-                    'May', 'Jun', 'Jul', 'Aug',
-                    'Sep', 'Oct', 'Nov', 'Dec'
-                ],
-                datasets: [{
-                    label: 'New Students In 2025',
-                    data: [50, 80, 120, 90, 150, 200, 180, 220, 210, 250, 270, 300],
-                    borderWidth: 2,
-                    borderColor: 'rgba(54, 162, 235, 1)',
-                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                    tension: 0.4, // smooth curves
-                    fill: true
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        display: true
-                    }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        title: {
-                            display: true,
-                            text: 'Students'
-                        }
-                    },
-                    x: {
-                        title: {
-                            display: true,
-                            text: 'Month'
-                        }
-                    }
-                }
-            }
-        });
-
-        const ctx2 = document.getElementById('myChart2');
-
-        new Chart(ctx2, {
-            type: 'bar',
-            data: {
-                labels: [
-                    'Intro to Python',
-                    'React Basics',
-                    'Advanced JS',
-                    'CSS Animations',
-                    'MongoDB for Beginners'
-                ],
-                datasets: [{
-                    label: 'Watch Time (Minutes)',
-                    data: [350, 420, 210, 180, 290],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.5)',
-                        'rgba(54, 162, 235, 0.5)',
-                        'rgba(255, 206, 86, 0.5)',
-                        'rgba(75, 192, 192, 0.5)',
-                        'rgba(153, 102, 255, 0.5)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        display: true
-                    }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        title: {
-                            display: true,
-                            text: 'Watch Time (Minutes)'
-                        }
-                    },
-                    x: {
-                        title: {
-                            display: true,
-                            text: 'Videos'
-                        }
-                    }
-                }
-            }
-        });
-
-    </script>
+    <script src="../js/dashboard.js"></script>
 
 
 </body>

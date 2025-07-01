@@ -210,55 +210,9 @@
             </h1>
             <div class="lesson-video">
                 <div class="video__container" id="videoContainer">
-                    <video id="video" src="../videos/video_placeholder.mp4" onclick="togglePlay()"></video>
+                    <video id="video" src="../videos/video_placeholder.mp4" controls></video>
 
-                    <div class="controlls">
-                        <div class="videoDurationBar__container">
-                            <input type="range" id="progressBar" class="videoDurationBar" min="0" value="0" />
-                        </div>
-
-                        <div class="buttons">
-                            <button class="btnController" onclick="skip(-5)">
-                                <i class="fa-solid fa-backward"></i>
-                            </button>
-                            <button class="btnController playPauseBtn" onclick="togglePlay()">
-                                <i class="fa-solid fa-play"></i>
-                            </button>
-                            <button class="btnController" onclick="skip(5)">
-                                <i class="fa-solid fa-forward"></i>
-                            </button>
-
-                            <div class="videoVolume__container">
-                                <button class="btnController" onclick="toggleMute()">
-                                    <i class="fa-solid fa-volume-high"></i>
-                                    <!-- <i class="fa-solid fa-volume-xmark"></i> -->
-                                </button>
-                                <input type="range" id="volumeInput" min="0" max="1" step="1" value="0" />
-                                <div class="time" id="timeDisplay">00:00 / 00:00</div>
-                            </div>
-                        </div>
-
-                        <div class="rightSide__buttons">
-                            <div class="speedContainer" id="speedContainer">
-                                <ul class="dropDown" id="speedDropDown">
-                                    <li onclick="setSpeed(2)">x2</li>
-                                    <li onclick="setSpeed(1.5)">x1.5</li>
-                                    <li onclick="setSpeed(1)">normal</li>
-                                    <li onclick="setSpeed(0.5)">x0.5</li>
-                                    <li onclick="setSpeed(0.2)">x0.2</li>
-                                </ul>
-                                <button class="btnController" onclick="toggleSpeedMenu()">
-                                    <i class="fa-solid fa-gear"></i>
-                                </button>
-                            </div>
-                            <button class="btnController" onclick="togglePIP()">
-                                <i class='bx bxs-videos'></i>
-                            </button>
-                            <button class="btnController expandBtn" onclick="toggleFullscreen()">
-                                <i class="fa-solid fa-expand"></i>
-                            </button>
-                        </div>
-                    </div>
+                  
                 </div>
             </div>
             <p class="lesson-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, officiis! Commodi
@@ -351,7 +305,7 @@
 
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
     <!-- <script src="../js/navbar.js"></script> -->
-    <script>
+    <!-- <script>
         const video = document.getElementById("video");
         const progressBar = document.getElementById("progressBar");
         const volumeInput = document.getElementById("volumeInput");
@@ -451,7 +405,7 @@
             speedDropDown.classList.remove("show");
         }
 
-    </script>
+    </script> -->
 
 </body>
 

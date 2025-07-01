@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/forms.css">
+    <link rel="stylesheet" href="../css/course.css" />
+    <title>AcalynIQ | Course</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar scrolling">
+        <a class="logo" href="../index.html">
+            <img src="../img/AcalynIQ.png" alt="logo" class="logo-image" />
+        </a>
+        <ul class="nav-list">
+            <div class="nav-links">
+                <li><a href="../index.html" class="nav-link">Dashboard</a></li>
+                <li><a href="../index.html" class="nav-link">Statics</a></li>
+                <!-- <li><a href="../index.html#courses" class="nav-link">Courses</a></li> -->
+                <li><a href="./courses.html" class="nav-link">Courses</a></li>
+                <li><a href="./videos.html" class="nav-link">Videos</a></li>
+                <li><a href="./contact.html" class="nav-link">Contact</a></li>
+            </div>
+
+            <div class="auth-links">
+                <li>
+                    <a href="./profile.html" class="">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+                            class="profile-icon" alt="">
+                    </a>
+                </li>
+            </div>
+
+        </ul>
+    </nav>
+
+    <div class="edit-buttons blur-bg">
+        <button class="btn cancel bg-white">Unpublish</button>
+
+        <button class="btn save">Save</button>
+    </div>
+    <main class="course-wrapper padding edit-course-page">
+
+        <section class="course-data">
+            <div class="course-info">
+                <div class="course-title-and-desc">
+                    <div class="course-title edit-field">
+                        <label class="label">title</label>
+                        <h1 contenteditable="true" id="course-title">Learn Python </h1>
+                        <button class="edit-btn">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                    </div>
+                    <div class="course-description edit-field">
+                        <div>
+                            <label for="" class="label">description</label>
+                            <p contenteditable="true" autocorrect="off">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Aliquam, sed!
+                                Maxime, adipisci?
+                                Laudantium
+                                distinctio quod quia cumque at, nulla soluta delectus sit temporibus expedita
+                                consequatur
+                                ipsa?
+                                Dignissimos rerum cum aperiam unde! Debitis ullam repellat aut natus laboriosam
+                                exercitationem
+                                soluta non voluptatum rerum cupiditate aliquid doloribus, esse mollitia fugiat quam
+                                minus
+                                laborum
+                                ipsum eveniet dignissimos dolore eum deleniti reiciendis quos. Quas perferendis fugit
+                                laudantium
+                                odio. Eum soluta rerum, in magnam facilis reprehenderit repudiandae deserunt voluptas
+                                sed
+                                dolores
+                                nostrum laudantium quia consectetur cupiditate eos aliquid corporis nisi libero quasi
+                                voluptates
+                                illum saepe fugiat et atque! Maiores tempore ad eveniet natus, totam similique?.</p>
+                        </div>
+                        <button class="edit-btn">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <div class="course-lessons">
+                    <div class="header">
+                        <h2>Course Lessons <span>(5)</span>
+                            <p> <i class="fa-solid fa-arrows"></i> drag and drop to reorder</p>
+                        </h2>
+                        <a href="#" class="btn">
+                            <i class="fa-solid fa-plus-circle"></i>
+                            <span>Add new</span>
+                        </a>
+
+                    </div>
+
+                    <div class="course-lessons-container">
+                        <div class="course-lesson blur-bg pos1">
+                            <button class="edit-btn" onclick="alert('edit')">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <div class="handle">
+                                <i class="fa-solid fa-grip-vertical"></i>
+                            </div>
+                            <i class="fa-solid fa-video"></i>
+                            <h4>Introduction to Python</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatem alias
+                                obcaecati pariatur dolorem
+                                veniam quod labore possimus libero quia!</p>
+                        </div>
+
+                        <div class="course-lesson blur-bg pos2">
+                            <button class="edit-btn" onclick="alert('edit')">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <div class="handle">
+                                <i class="fa-solid fa-grip-vertical"></i>
+                            </div>
+                            <i class="fa-solid fa-video"></i>
+                            <h4>Html Basics</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatem alias
+                                obcaecati pariatur dolorem
+                                veniam quod labore possimus libero quia!</p>
+                        </div>
+
+                        <div class="course-lesson blur-bg pos3">
+                            <button class="edit-btn" onclick="alert('edit')">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <div class="handle">
+                                <i class="fa-solid fa-grip-vertical"></i>
+                            </div>
+                            <i class="fa-solid fa-video"></i>
+                            <h4>OOP</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatem alias
+                                obcaecati pariatur dolorem
+                                veniam quod labore possimus libero quia!</p>
+                        </div>
+
+                        <div class="course-lesson blur-bg pos4">
+                            <button class="edit-btn" onclick="alert('edit')">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <div class="handle">
+                                <i class="fa-solid fa-grip-vertical"></i>
+                            </div>
+                            <i class="fa-solid fa-video"></i>
+                            <h4>Outro</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatem alias
+                                obcaecati pariatur dolorem
+                                veniam quod labore possimus libero quia!</p>
+                        </div>
+
+                        <div class="course-lesson blur-bg pos1">
+                            <button class="edit-btn" onclick="alert('edit')">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <div class="handle">
+                                <i class="fa-solid fa-grip-vertical"></i>
+                            </div>
+                            <i class="fa-solid fa-video"></i>
+                            <h4>Extra</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatem alias
+                                obcaecati pariatur dolorem
+                                veniam quod labore possimus libero quia!</p>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <aside class="side-card-conatiner">
+            <div class="side-card">
+                <div class="course-thumbnail">
+                    <img src="https://templates.simplified.co/usetldr/1022255/thumb/5a108056-a070-44ee-a123-1afd489077e0.jpg"
+                        alt="course" />
+                </div>
+
+                <div class="course-payment-info">
+
+                    <div class="learning-info">
+                        <div class="learned-items">
+                            <h3>What you'll learn <button class="edit-btn"><i
+                                        class="fa-solid fa-pen-to-square"></i></button> </h3>
+                            <ul>
+                                <li><span>Variables & Data Types</span></li>
+                                <li><span>Loops & Conditions</span></li>
+                                <li><span>Functions & Modules</span></li>
+                                <li><span>Real-world Projects</span></li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="course-price-info edit-field">
+                        <span>EGP</span>
+                        <h3 contenteditable="true" class="price"> 1,000</h3>
+                        <button class="edit-btn">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                    </div>
+
+                    <div class="sale-container">
+                        <label for="sale">
+                            Generate Code
+                        </label>
+                        <div class="form-group">
+                            <div class="price-container blur-bg pos1">
+                                <span class="blur-bg">EGP</span>
+                                <input type="number" required autocomplete="" id="price" placeholder="Enter discount">
+                            </div>
+                             <select class="blur-bg" name="expiary-date" id="">
+                                <option value="" disabled selected>Expiary</option>
+                                <option value="1">1 Day</option>
+                                <option value="2">2 Days</option>
+                                <option value="3">3 Days</option>
+                                <option value="4">4 Days</option>
+                                <option value="5">5 Days</option>
+                                <option value="6">6 Days</option>
+                                <option value="7">7 Days</option>
+                            </select>
+                        </div>
+                        <button class="btn bg-white">Generate Promo Code</button>
+
+                    </div>
+
+                </div>
+            </div>
+        </aside>
+    </main>
+
+
+
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+
+    <script>
+        const lessonsList = document.querySelector('.course-lessons-container');
+        Sortable.create(lessonsList, {
+            animation: 150,
+            ghostClass: "sortable-ghost",
+            chosenClass: "sortable-chosen",
+            handle: ".handle",
+            onEnd: function (evt) {
+                const newOrder = [...lessonsList.children].map(el => el.dataset.id);
+                console.log("New order:", newOrder);
+
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>

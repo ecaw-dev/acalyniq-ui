@@ -257,7 +257,8 @@
     font-weight: 600;
 }
 
-.form-container .data-form .fields-container .field input {
+.form-container .data-form .fields-container .field input,
+.form-container .data-form .fields-container .field textarea {
     width: 100%;
     padding: .5rem 1rem;
     border-radius: var(--border-r-2);
@@ -268,7 +269,14 @@
     outline: none;
 }
 
-.form-container .data-form .fields-container .field input::placeholder {
+.form-container .data-form .fields-container .field textarea {
+    resize: none;
+    min-height: 130px;
+}
+
+
+.form-container .data-form .fields-container .field input::placeholder,
+.form-container .data-form .fields-container .field textarea::placeholder {
     color: var(--dark-gray-color);
 }
 
@@ -277,7 +285,8 @@
 
 
 .form-container .data-form .fields-container .field .password-container,
-.form-container .data-form .fields-container .field .phone-container {
+.form-container .data-form .fields-container .field .phone-container,
+.price-container {
     position: relative;
     width: 100%;
     display: flex;
@@ -287,7 +296,8 @@
 }
 
 .form-container .data-form .fields-container .field .password-container input,
-.form-container .data-form .fields-container .field .phone-container input {
+.form-container .data-form .fields-container .field .phone-container input,
+.price-container input {
     width: 100%;
     padding: .5rem 0 .5rem 1rem;
     border-radius: var(--border-r-2);
@@ -302,7 +312,8 @@
 
 
 .form-container .data-form .fields-container .field .password-container input::placeholder,
-.form-container .data-form .fields-container .field .phone-container input::placeholder {
+.form-container .data-form .fields-container .field .phone-container input::placeholder,
+.price-container input::placeholder {
     color: var(--dark-gray-color);
 }
 
@@ -318,6 +329,7 @@
 
 .form-container .data-form .fields-container .field .password-container::before,
 .form-container .data-form .fields-container .field .phone-container::before,
+.price-container::before,
 #dateOfBirth::before {
 
     display: none;
@@ -327,7 +339,8 @@
     padding: .4523rem 1rem;
 }
 
-.form-container .data-form .fields-container .field .phone-container span {
+.form-container .data-form .fields-container .field .phone-container span,
+.price-container span {
     font-family: var(--secondary-font);
     font-size: 1rem;
     font-weight: 600;
